@@ -10933,3 +10933,34 @@ a.text-dark:focus {
   }
 }
 
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+body {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "\30E1\30A4\30EA\30AA", meiryo, sans-serif;
+  font-weight: 400;
+}
+
+.validation {
+  color: red;
+  font-size: 14px;
+}
+
+nav {
+  background-color: #55C501 !important;
+}
+
+nav #Navber .navbar-nav .nav-item {
+  /* 投稿するボタンの背景を深緑にする */
+}
+
+nav #Navber .navbar-nav .nav-item #post-link {
+  background-color: #367E00;
+  border-radius: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
