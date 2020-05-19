@@ -10950,7 +10950,7 @@ body {
 }
 
 nav {
-  background-color: #55C501 !important;
+  background-color: #FFCC00 !important;
 }
 
 nav #Navber .navbar-nav .nav-item {
@@ -10958,7 +10958,7 @@ nav #Navber .navbar-nav .nav-item {
 }
 
 nav #Navber .navbar-nav .nav-item #post-link {
-  background-color: #367E00;
+  background-color: #FF9900;
   border-radius: 5px;
   padding-left: 1rem;
   padding-right: 1rem;
