@@ -11,6 +11,7 @@
 
 
     <ul class="navbar-nav ml-auto mr-5">
+      @if (Auth::check())
       <li class="nav-item ml-2">
         <a class="nav-link text-white" id="post-link" href="#">レシピ一覧</a>
       </li>
@@ -25,7 +26,7 @@
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        ユーザー名
+          ユーザー名
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">マイページ</a>
@@ -33,23 +34,23 @@
           <a class="dropdown-item" href="#">設定</a>
           <div class="dropdown-divider"></div>
 
-          <a class="dropdown-item" href="{{ route('logout') }}"
-              onclick="event.preventDefault();
+          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">
-              ログアウト
+            ログアウト
           </a>
-
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
+            @csrf
           </form>
         </div>
       </li>
+      @else
       <li class="nav-item ml-2">
         <a class="nav-link text-white" id="register" href="/register">ユーザ登録</a>
       </li>
       <li class="nav-item ml-2">
         <a class="nav-link text-white" href="#">ログイン</a>
       </li>
+      @endif
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
