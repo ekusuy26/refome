@@ -12,6 +12,15 @@
 
     <ul class="navbar-nav ml-auto mr-5">
       <li class="nav-item ml-2">
+        <a class="nav-link text-white" id="post-link" href="#">レシピ一覧</a>
+      </li>
+      <li class="nav-item ml-2">
+        <a class="nav-link text-white" id="post-link" href="#">レシピを投稿</a>
+      </li>
+      <li class="nav-item ml-2">
+        <a class="nav-link text-white" id="post-link" href="#">使った材料の入力</a>
+      </li>
+      <li class="nav-item ml-2">
         <a class="nav-link text-white" id="post-link" href="/drafts/new">登録する</a>
       </li>
       <li class="nav-item dropdown">
