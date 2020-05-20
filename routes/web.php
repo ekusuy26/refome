@@ -19,3 +19,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/foods/new', 'Auth\FoodController@index')->name('foods.new');
 Route::post('/foods/new', 'Auth\FoodController@foodArticle')->name('foods.new.posts');
+
+Route::get('/foods/delete', 'Auth\FoodController@delete')->name('foods.delete');
+Route::post('/foods/delete', 'Auth\FoodController@foodDelete')->name('foods.delete.posts');
