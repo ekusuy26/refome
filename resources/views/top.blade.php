@@ -34,18 +34,11 @@
 </div>
 @else
 <div class="top-wrapper">
-<!-- {{$tests}}
-    @foreach ($tests as $test)
-    <div class="aaa">
-        {{$test}}
-    </div>
-    @endforeach -->
     <div class="foods-wrapper col-md-6">
-        @foreach ($foods as $food)
+        @foreach ($foodQuantities as $key => $foodQuantity)
         <div class="food-box">
-            <div class="food-data" style="width: 40%">{{ $food->name }}</div>
-            <div class="food-data" style="width: 20%">{{ $food->quantity }}</div>
-            <div class="food-data" style="width: 40%">{{ $food->created_at->format('Y/m/d') }}</div>
+            <div class="food-data" style="width: 60%">{{ $key }}</div>
+            <div class="food-data" style="width: 40%">{{ $foodQuantity }}</div>
         </div>
         @endforeach
     </div>

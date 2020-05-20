@@ -11,8 +11,7 @@ class FoodController extends Controller
 {
     public function showTopPage()
     {
-        $foods = Food::orderBy('created_at', 'asc')->get();
-        $tests = Food::where('user_id', 1)
+        $foodQuantities = Food::where('user_id', 1)
             ->orderBy('created_at', 'asc')
             ->get()
             ->groupBy(function ($row) {
@@ -21,7 +20,7 @@ class FoodController extends Controller
             ->map(function ($value) {
                 return $value->sum('quantity');
             });
-        return view('top', compact('foods', 'tests'));
+        return view('top', compact('foodQuantities'));
     }
 
     public function index()
