@@ -14,19 +14,19 @@ class FoodController extends Controller
         return view('auth.foods.new');
     }
 
-    // public function foodArticle(Request $request)
-    // {
-    //     // バリデーション
-    //     $request->validate([
-    //         'name' => 'required|string',
-    //         'quantity' => 'required|integer',
-    //     ]);
+    public function foodArticle(Request $request)
+    {
+        // バリデーション
+        $request->validate([
+            'name' => 'required|string',
+            'quantity' => 'required|integer',
+        ]);
 
-    //     $article = Food::create([
-    //         'user_id' => Auth::user()->id,
-    //         'name' => $request->name,
-    //         'quantity' => $request->quantity,
-    //     ]);
-    //     return redirect('/');
-    // }
+        Food::create([
+            'user_id' => Auth::user()->id,
+            'name' => $request->name,
+            'quantity' => $request->quantity,
+        ]);
+        return redirect('/');
+    }
 }
