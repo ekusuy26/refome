@@ -11,7 +11,7 @@ class FoodController extends Controller
 {
     public function showTopPage()
     {
-        $foodQuantities = Food::where('user_id', 1)
+        $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {
                 return $row->name;
