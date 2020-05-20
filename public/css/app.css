@@ -11005,3 +11005,9 @@ nav #Navber .navbar-nav .nav-item #post-link {
   border: solid 2px white;
 }
 
+.main-top {
+  background-image: url(/images/refrigerator.png?31733174ae3a340dfd49618760e9b87a);
+  background-size: contain;
+  height: calc(100vh - 100px);
+}
+

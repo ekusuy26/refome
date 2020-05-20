@@ -22,7 +22,7 @@
                 </tr>
                 <tr>
                     <th>パスワード</th>
-                    <td><input type="password" class="form-control" placeholder="password"  name="password" required size="50"></td>
+                    <td><input type="password" class="form-control" placeholder="password" name="password" required size="50"></td>
                 </tr>
                 <tr>
                     <th></th>
@@ -33,6 +33,15 @@
     </div>
 </div>
 @else
+<!-- <div class="center-block">
+    <div class="main-top">
+        hogehoge
+    </div>
+</div> -->
+<div class="mx-auto" style="width: 50%;">
+    <div class="main-top">
+    </div>
+ </div>
 @endif
 
 @endsection
