@@ -34,6 +34,7 @@
 </div>
 @else
 <div class="top-wrapper">
+{{$tests}}
     @foreach ($tests as $test)
     <div class="aaa">
         {{$test}}

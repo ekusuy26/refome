@@ -18,11 +18,9 @@ class FoodController extends Controller
             ->groupBy(function ($row) {
                 return $row->name;
             })
-            ->map(function ($day) {
-                return $day->sum('quantity');
+            ->map(function ($value) {
+                return $value->sum('quantity');
             });
-        // これで豚肉の合計値は出せる
-        // $tests = Food::where('name', '豚肉')->sum('quantity');
         return view('top', compact('foods', 'tests'));
     }
 
