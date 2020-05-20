@@ -12,7 +12,11 @@ class FoodController extends Controller
     public function showTopPage()
     {
         $foods = Food::orderBy('created_at', 'asc')->get();
-        return view('top', compact('foods'));
+        $tests = DB::table('foods')
+            ->select(DB::raw('count(*) as user_count, status'))
+            ->groupBy('status')
+            ->get();
+        return view('top', compact('foods', 'tests'));
     }
 
     public function index()
