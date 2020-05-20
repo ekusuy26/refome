@@ -35,4 +35,25 @@ class FoodController extends Controller
         ]);
         return redirect('/');
     }
+
+    public function delete()
+    {
+        return view('auth.foods.new');
+    }
+
+    public function foodDelete(Request $request)
+    {
+        // バリデーション
+        $request->validate([
+            'name' => 'required|string',
+            'quantity' => 'required|integer',
+        ]);
+
+        Food::create([
+            'user_id' => Auth::user()->id,
+            'name' => $request->name,
+            'quantity' => -($request->quantity),
+        ]);
+        return redirect('/');
+    }
 }
