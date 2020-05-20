@@ -45,7 +45,7 @@
         <div class="food-box">
             <div class="food-data" style="width: 40%">{{ $food->name }}</div>
             <div class="food-data" style="width: 20%">{{ $food->quantity }}</div>
-            <div class="food-data" style="width: 40%">{{ $food->created_at }}</div>
+            <div class="food-data" style="width: 40%">{{ $food->created_at->format('Y/m/d') }}</div>
         </div>
         @endforeach
     </div>
