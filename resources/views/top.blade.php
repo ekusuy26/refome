@@ -34,6 +34,11 @@
 </div>
 @else
 <div class="top-wrapper">
+    @foreach ($tests as $test)
+    <div class="aaa">
+        {{$test}}
+    </div>
+    @endforeach
     <div class="foods-wrapper col-md-6">
         @foreach ($foods as $food)
         <div class="food-box">

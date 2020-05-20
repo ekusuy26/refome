@@ -12,10 +12,17 @@ class FoodController extends Controller
     public function showTopPage()
     {
         $foods = Food::orderBy('created_at', 'asc')->get();
-        $tests = DB::table('foods')
-            ->select(DB::raw('count(*) as user_count, status'))
-            ->groupBy('status')
-            ->get();
+        $tests = Food::where('user_id', 1)
+            ->orderBy('created_at', 'asc')
+            ->get()
+            ->groupBy(function ($row) {
+                return $row->name;
+            })
+            ->map(function ($day) {
+                return $day->sum('quantity');
+            });
+        // これで豚肉の合計値は出せる
+        // $tests = Food::where('name', '豚肉')->sum('quantity');
         return view('top', compact('foods', 'tests'));
     }
 
