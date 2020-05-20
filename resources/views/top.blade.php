@@ -34,12 +34,12 @@
 </div>
 @else
 <div class="top-wrapper">
-{{$tests}}
+<!-- {{$tests}}
     @foreach ($tests as $test)
     <div class="aaa">
         {{$test}}
     </div>
-    @endforeach
+    @endforeach -->
     <div class="foods-wrapper col-md-6">
         @foreach ($foods as $food)
         <div class="food-box">
