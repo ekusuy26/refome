@@ -10953,10 +10953,6 @@ nav {
   background-color: #FFCC00 !important;
 }
 
-nav #Navber .navbar-nav .nav-item {
-  /* 投稿するボタンの背景を深緑にする */
-}
-
 nav #Navber .navbar-nav .nav-item #post-link {
   background-color: #FF9900;
   border-radius: 5px;

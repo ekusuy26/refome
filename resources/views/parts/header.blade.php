@@ -25,7 +25,7 @@
         <a class="nav-link text-white" id="post-link" href="/foods/new">登録する</a>
       </li>
       <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="nav-link dropdown-toggle text-white" id="navbarDropdown" style="width: 100px;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{ Auth::user()->name }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
