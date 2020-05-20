@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Auth;
 
 class FoodController extends Controller
 {
+    public function showTopPage()
+    {
+        $foods = Food::orderBy('created_at', 'asc')->get();
+        return view('top', compact('foods'));
+    }
+
     public function index()
     {
         return view('auth.foods.new');
