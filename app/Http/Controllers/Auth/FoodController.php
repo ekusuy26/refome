@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Food;
+use Illuminate\Support\Facades\Auth;
 
 class FoodController extends Controller
 {
@@ -11,4 +13,20 @@ class FoodController extends Controller
     {
         return view('auth.foods.new');
     }
+
+    // public function foodArticle(Request $request)
+    // {
+    //     // バリデーション
+    //     $request->validate([
+    //         'name' => 'required|string',
+    //         'quantity' => 'required|integer',
+    //     ]);
+
+    //     $article = Food::create([
+    //         'user_id' => Auth::user()->id,
+    //         'name' => $request->name,
+    //         'quantity' => $request->quantity,
+    //     ]);
+    //     return redirect('/');
+    // }
 }
