@@ -33,16 +33,15 @@
     </div>
 </div>
 @else
-<div class="mx-auto" style="width: 50%;">
-    <div class="main-top">
-        <div class="foods-wrapper col-md-6">
-            @foreach ($foods as $food)
-            <div class="food-box">
-                <div class="article-date">{{ $food->name }}</div>
-                <div class="article-date">{{ $food->quantity }}</div>
-            </div>
-            @endforeach
+<div class="top-wrapper">
+    <div class="foods-wrapper col-md-6">
+        @foreach ($foods as $food)
+        <div class="food-box">
+            <div class="food-data" style="width: 40%">{{ $food->name }}</div>
+            <div class="food-data" style="width: 20%">{{ $food->quantity }}</div>
+            <div class="food-data" style="width: 40%">{{ $food->created_at }}</div>
         </div>
+        @endforeach
     </div>
 </div>
 @endif

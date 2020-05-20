@@ -38,8 +38,28 @@
   }
 }
 
-.main-top{
-  background-image: url('../images/refrigerator.png');
-  background-size: contain;
-  height: calc(100vh - 100px);
+.top-wrapper {
+  background-color: #F6F6F6;
+  padding: 40px 0px;
+  height: 100vh;
+  .foods-wrapper {
+    background-image: url('../images/refrigerator.png');
+    background-size: contain;
+    height: calc(100vh - 100px);
+    margin: 0px auto;
+    padding: 20px;
+    .food-box {
+      width: 85%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      .food-data {
+        background-color:rgba(246,246,246,0.6);
+        border-bottom: solid 3px #F6F6F6;
+        color: gray;
+        padding: 0 15px;
+      }
+    }
+  }
 }
