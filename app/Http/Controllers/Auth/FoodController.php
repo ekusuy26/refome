@@ -38,7 +38,7 @@ class FoodController extends Controller
 
     public function delete()
     {
-        return view('auth.foods.new');
+        return view('auth.foods.delete');
     }
 
     public function foodDelete(Request $request)
