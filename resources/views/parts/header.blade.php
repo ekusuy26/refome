@@ -19,7 +19,7 @@
         <a class="nav-link text-white" id="post-link" href="#">レシピを投稿</a>
       </li>
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" id="post-link" href="#">使った材料の入力</a>
+        <a class="nav-link text-white" id="post-link" href="/foods/delete">使った材料の入力</a>
       </li>
       <li class="nav-item ml-2">
         <a class="nav-link text-white" id="post-link" href="/foods/new">登録する</a>
