@@ -33,11 +33,6 @@
     </div>
 </div>
 @else
-<!-- <div class="center-block">
-    <div class="main-top">
-        hogehoge
-    </div>
-</div> -->
 <div class="mx-auto" style="width: 50%;">
     <div class="main-top">
     </div>
