@@ -1,0 +1,16 @@
+.post-new-wrapper{
+  padding: 10px 50px;
+  .post-new-box{
+    display: flex;
+    .post-new-box-left{}
+    .post-new-box-right{
+      .post-new-title{}
+      .post-new-detail{
+        display: flex;
+        .post-new-material{
+          .post-page-footer{}
+        }
+      }
+    }
+  }
+}
