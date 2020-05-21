@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function showPostPage()
     {
-        return view('auth.posts.new');
+        return view('auth.posts.index');
     }
     
     public function index()
