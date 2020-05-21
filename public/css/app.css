@@ -11059,12 +11059,46 @@ nav #Navber .navbar-nav .nav-item #post-link {
   color: #808080;
 }
 
+.post-new-wrapper {
+  padding: 10px 50px;
+}
+
 .post-new-wrapper .post-new-box {
   display: flex;
 }
 
+.post-new-wrapper .post-new-box .post-new-box-left {
+  width: 30%;
+  margin-right: 10px;
+}
+
+.post-new-wrapper .post-new-box .post-new-box-right {
+  width: 70%;
+}
+
+.post-new-wrapper .post-new-box .post-new-box-right .post-new-title {
+  margin-bottom: 10px;
+}
+
 .post-new-wrapper .post-new-box .post-new-box-right .post-new-detail {
+  height: 80vh;
   display: flex;
+}
+
+.post-new-wrapper .post-new-box .post-new-box-right .post-new-detail #body-input {
+  height: 100%;
+}
+
+.post-new-wrapper .post-new-box .post-new-box-right .post-new-detail .post-new-material {
+  margin-left: 10px;
+  width: 60%;
+  position: relative;
+}
+
+.post-new-wrapper .post-new-box .post-new-box-right .post-new-detail .post-new-material .post-page-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /*!
