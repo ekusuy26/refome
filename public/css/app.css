@@ -11034,11 +11034,11 @@ nav #Navber .navbar-nav .nav-item #post-link {
   height: 100vh;
 }
 
-.posts-wrapper .posts-wrapper {
+.posts-wrapper .post-wrapper {
   margin: 0 auto;
 }
 
-.posts-wrapper .posts-wrapper .article-box {
+.posts-wrapper .post-wrapper .article-box {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -11046,15 +11046,15 @@ nav #Navber .navbar-nav .nav-item #post-link {
   box-shadow: 5px 5px 5px #999;
 }
 
-.posts-wrapper .posts-wrapper .article-box .article-box-left {
+.posts-wrapper .post-wrapper .article-box .article-box-left {
   margin-right: 20px;
 }
 
-.posts-wrapper .posts-wrapper .article-box .article-box-right {
+.posts-wrapper .post-wrapper .article-box .article-box-right {
   color: #808080;
 }
 
-.posts-wrapper .posts-wrapper .article-box .article-box-right .article-title {
+.posts-wrapper .post-wrapper .article-box .article-box-right .article-title {
   text-decoration: none;
   color: #808080;
 }
