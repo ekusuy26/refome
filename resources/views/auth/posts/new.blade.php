@@ -1,6 +1,6 @@
 @extends('layouts.common')
 @section('content')
-<form class="post-page-wrapper" action="/posts/new" method="post">
+<form class="post-page-wrapper" action="/posts/new" method="post" enctype="multipart/form-data">
 @csrf
     <input type="text" class="form-control m-1" id="title-input" placeholder="タイトル" name="title">
     <input type="file" class="form-control m-1" placeholder="写真を選択" name="image">
