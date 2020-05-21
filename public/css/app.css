@@ -11190,6 +11190,10 @@ nav #Navber .navbar-nav .nav-item #post-link {
   width: 40%;
 }
 
+.food-wrap {
+  display: flex;
+}
+
 .post-page-footer {
   text-align: center;
 }
