@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    public function showPostPage()
+    {
+        return view('auth.posts.new');
+    }
+    
     public function index()
     {
         return view('auth.posts.new');
