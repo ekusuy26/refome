@@ -26,7 +26,8 @@ body {
 @import './parts/header';
 @import './parts/login';
 @import './parts/top';
-@import './parts/posts';
+@import './parts/posts/index';
+@import './parts/posts/new';
 
 // Font Awesome
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
