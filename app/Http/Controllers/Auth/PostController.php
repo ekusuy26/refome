@@ -29,14 +29,14 @@ class PostController extends Controller
             'body' => 'required|string',
         ]);
 
-        Post::create([
+        $article = Post::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
             'image' => $request->image,
             'material' => $request->material,
             'body' => $request->body,
         ]);
-        return redirect('/');
+        return redirect("/posts/{$article->id}");
     }
 
 }
