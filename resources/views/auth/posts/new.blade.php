@@ -6,7 +6,7 @@
         @csrf
         <div class="post-new-box mx-auto" style="width: 80%;">
             <div class="post-new-box-left">
-                <input type="file" class="form-control" placeholder="写真を選択" name="image">
+                <input type="file" class="form-control" name="image">
             </div>
             <div class="post-new-box-right">
                 <div class="post-new-title">
