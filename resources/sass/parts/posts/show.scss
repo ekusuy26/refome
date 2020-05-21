@@ -44,6 +44,12 @@
           border: dashed 2px white;
           padding: 0.2em 0.5em;
           color: #454545;
+          .post-show-body-text{
+            text-align: center;
+            .under{
+              border-bottom: dashed 3px #87CEFA;
+            }
+          }
         }
         .post-show-body:after{
           position: absolute;
