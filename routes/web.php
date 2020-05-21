@@ -25,3 +25,5 @@ Route::post('/foods/delete', 'Auth\FoodController@foodDelete')->name('foods.dele
 
 Route::get('/posts/new', 'Auth\PostController@index')->name('posts.new');
 Route::post('/posts/new', 'Auth\PostController@postArticle')->name('posts.new.posts');
+
+Route::get('/posts', 'Auth\PostController@showPostPage')->name('post');
