@@ -11,7 +11,7 @@
   @endif
   <input type="text" class="form-control mx-auto m-1" style="width:50%;" placeholder="数量" name="quantity">
   <div class="post-page-footer mx-auto m-1" style="width:50%;">
-    <input type="submit" class="post-button" value="冷蔵庫から取り出す">
+    <input type="submit" class="post-button m-1" value="冷蔵庫から取り出す">
   </div>
 </form>
 
