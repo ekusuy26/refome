@@ -11029,6 +11029,36 @@ nav #Navber .navbar-nav .nav-item #post-link {
   padding: 0 15px;
 }
 
+.posts-wrapper {
+  padding: 50px 0;
+  height: 100vh;
+}
+
+.posts-wrapper .posts-wrapper {
+  margin: 0 auto;
+}
+
+.posts-wrapper .posts-wrapper .article-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px #999;
+}
+
+.posts-wrapper .posts-wrapper .article-box .article-box-left {
+  margin-right: 20px;
+}
+
+.posts-wrapper .posts-wrapper .article-box .article-box-right {
+  color: #808080;
+}
+
+.posts-wrapper .posts-wrapper .article-box .article-box-right .article-title {
+  text-decoration: none;
+  color: #808080;
+}
+
 /*!
  * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

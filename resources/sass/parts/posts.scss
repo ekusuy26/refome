@@ -1,0 +1,30 @@
+.posts-wrapper{
+  padding: 50px 0;
+  height: 100vh;
+  .posts-wrapper{
+    margin: 0 auto;
+    .article-box{
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 10px;
+      box-shadow: 5px 5px 5px #999;
+      .article-box-left{
+        margin-right: 20px;
+      }
+      .article-box-right{
+        color: #808080;
+        .article-title{
+          text-decoration: none;
+          color: #808080;
+        }
+        .article-details{
+          .article-data{
+          }
+          .article-data{
+          }
+        }
+      }
+    }
+  }
+}

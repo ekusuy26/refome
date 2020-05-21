@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light pl-5 pr-5 pt-2 pb-2">
+<nav class="navbar navbar-expand-lg navbar-light pl-5 pr-5 pt-2 pb-2 sticky-top">
   <a class="navbar-brand text-white" href="/">refome</a>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
     <span class="navbar-toggler-icon"></span>
