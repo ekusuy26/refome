@@ -42,7 +42,7 @@ class PostController extends Controller
     public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
-        return view('auth.item', compact('article'));
+        return view('auth.posts.show', compact('article'));
     }
 
 }
