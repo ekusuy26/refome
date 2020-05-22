@@ -29,3 +29,10 @@ Route::post('/posts/new', 'Auth\PostController@postArticle')->name('posts.new.po
 Route::get('/posts/{id}', 'Auth\PostController@showArticle')->name('item');
 
 Route::get('/posts', 'Auth\PostController@showPostPage')->name('post');
+
+Route::group(['middleware'=>'auth'],function(){
+  Route::group(['prefix'=>'posts/{id}'],function(){
+     Route::post('favorite','FavoriteController@store')->name('favorites.favorite');
+     Route::delete('unfavorite','FavoriteController@destroy')->name('favorites.unfavorite');
+  });
+});
