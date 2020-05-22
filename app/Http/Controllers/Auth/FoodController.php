@@ -33,10 +33,6 @@ class FoodController extends Controller
         $request->validate([
             'name1' => 'required|string',
             'quantity1' => 'required|integer',
-            'name2' => 'required|string',
-            'quantity2' => 'required|integer',
-            'name3' => 'required|string',
-            'quantity3' => 'required|integer',
         ]);
 
         Food::create([
@@ -44,16 +40,20 @@ class FoodController extends Controller
             'name' => $request->name1,
             'quantity' => $request->quantity1,
         ]);
-        Food::create([
-            'user_id' => Auth::user()->id,
-            'name' => $request->name2,
-            'quantity' => $request->quantity2,
-        ]);
-        Food::create([
-            'user_id' => Auth::user()->id,
-            'name' => $request->name3,
-            'quantity' => $request->quantity3,
-        ]);
+        if (!empty($request->name2)) {
+            Food::create([
+                'user_id' => Auth::user()->id,
+                'name' => $request->name2,
+                'quantity' => $request->quantity2,
+            ]);
+        }
+        if (!empty($request->name3)) {
+            Food::create([
+                'user_id' => Auth::user()->id,
+                'name' => $request->name3,
+                'quantity' => $request->quantity3,
+            ]);
+        }
         return redirect('/');
     }
 
