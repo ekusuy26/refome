@@ -49,7 +49,7 @@ class PostController extends Controller
                'count_favorite_users'=>$count_favorite_users,
               ];
 
-        return view('auth.posts.show', compact('article', 'data'));
+        return view('auth.posts.show', compact('article', 'count_favorite_users'));
     }
 
 }
