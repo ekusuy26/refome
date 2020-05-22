@@ -13,7 +13,7 @@
                     <input type="text" class="form-control" id="title-input" placeholder="タイトル" name="title">
                 </div>
                 <div class="post-new-detail">
-                    <input type="text" class="form-control" id="body-input" placeholder="説明文" name="body">
+                    <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body"></textarea>
                     <div class="post-new-material">
                         <input type="text" class="form-control" placeholder="材料" name="material">
                         <div class="post-page-footer">
