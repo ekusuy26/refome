@@ -11,7 +11,7 @@
       <div class="article-box-right">
         <a class="article-title" href="/posts/{{$article->id}}">{{ $article->title }}</a>
         <div class="article-details">
-          <div class="article-data">{{ $article->user_id }}</div>
+          <div class="article-data">{{ $article->user->name }}</div>
           <div class="article-data">{{ $article->created_at }}</div>
         </div>
         <div class="text-right mb-2">いいね！
