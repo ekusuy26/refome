@@ -36,4 +36,42 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // favoriteを通じてpostにつながってるという宣言
+    public function favorites()
+    {
+        return $this->belongsToMany(Post::class, 'favorites', 'user_id', 'post_id')->withTimestamps();
+    }
+
+    // いいねをつける
+    public function favorite($postId)
+    {
+        $exist = $this->is_favorite($postId);
+
+        if($exist){
+            return false;
+        }else{
+            $this->favorites()->attach($postId);
+            return true;
+        }
+    }
+
+    // いいねを外す
+    public function unfavorite($postId)
+    {
+        $exist = $this->is_favorite($postId);
+
+        if($exist){
+            $this->favorites()->detach($postId);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    // いいねしてるかどうか
+    public function is_favorite($postId)
+    {
+        return $this->favorites()->where('post_id',$postId)->exists();
+    }
 }
