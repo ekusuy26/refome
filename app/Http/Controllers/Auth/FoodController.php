@@ -31,14 +31,28 @@ class FoodController extends Controller
     {
         // バリデーション
         $request->validate([
-            'name' => 'required|string',
-            'quantity' => 'required|integer',
+            'name1' => 'required|string',
+            'quantity1' => 'required|integer',
+            'name2' => 'required|string',
+            'quantity2' => 'required|integer',
+            'name3' => 'required|string',
+            'quantity3' => 'required|integer',
         ]);
 
         Food::create([
             'user_id' => Auth::user()->id,
-            'name' => $request->name,
-            'quantity' => $request->quantity,
+            'name' => $request->name1,
+            'quantity' => $request->quantity1,
+        ]);
+        Food::create([
+            'user_id' => Auth::user()->id,
+            'name' => $request->name2,
+            'quantity' => $request->quantity2,
+        ]);
+        Food::create([
+            'user_id' => Auth::user()->id,
+            'name' => $request->name3,
+            'quantity' => $request->quantity3,
         ]);
         return redirect('/');
     }
