@@ -20,7 +20,9 @@ class CreatePostsTable extends Migration
             $table->string('image');
             $table->integer('material');
             $table->text('body');
-            $table->integer('user_id');
+            $table->bigInteger('user_id')->unsigned()->index();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });
