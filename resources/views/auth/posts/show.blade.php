@@ -5,17 +5,17 @@
   <div class="post-show-box mx-auto">
     <div class="post-show-box-left">
       <img src="{{ asset('/storage/img/'.$article->image) }}" style="width: 100%">
-      @if (Auth::id() != $user->id)
+      @if (Auth::id() != $article->user_id)
       
-          @if (Auth::user()->is_favorite($post->id))
+          @if (Auth::user()->is_favorite($article->id))
       
-              {!! Form::open(['route' => ['favorites.unfavorite', $post->id], 'method' => 'delete']) !!}
+              {!! Form::open(['route' => ['favorites.unfavorite', $article->id], 'method' => 'delete']) !!}
                   {!! Form::submit('いいね！を外す', ['class' => "button btn btn-warning"]) !!}
               {!! Form::close() !!}
       
           @else
       
-              {!! Form::open(['route' => ['favorites.favorite', $post->id]]) !!}
+              {!! Form::open(['route' => ['favorites.favorite', $article->id]]) !!}
                   {!! Form::submit('いいね！を付ける', ['class' => "button btn btn-success"]) !!}
               {!! Form::close() !!}
       
