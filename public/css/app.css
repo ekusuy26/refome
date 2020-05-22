@@ -11043,7 +11043,9 @@ nav #Navber .navbar-nav .nav-item #post-link {
   align-items: center;
   padding: 20px;
   margin-bottom: 10px;
+  background-color: #ffffff;
   box-shadow: 5px 5px 5px #999;
+  border-radius: 4px;
 }
 
 .posts-wrapper .post-wrapper .article-box .article-box-left {
@@ -11068,6 +11070,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
   position: absolute;
   bottom: 0;
   width: 100%;
+  font-size: 20px;
 }
 
 .post-new-wrapper {
@@ -11131,6 +11134,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
 }
 
 .post-show-wrapper .post-show-box .post-show-box-right .post-show-title {
+  border-radius: 4px;
   position: relative;
   background: #fff0cd;
   box-shadow: 0px 0px 0px 5px #fff0cd;
@@ -11163,6 +11167,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
 }
 
 .post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body {
+  border-radius: 4px;
   width: 48%;
   position: relative;
   background: #fff0cd;
@@ -11194,11 +11199,6 @@ nav #Navber .navbar-nav .nav-item #post-link {
 .post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body p {
   margin: 0;
   padding: 0;
-}
-
-.post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-material {
-  background-color: green;
-  width: 40%;
 }
 
 .food-wrap {

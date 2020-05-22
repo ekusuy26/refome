@@ -8,7 +8,9 @@
       align-items: center;
       padding: 20px;
       margin-bottom: 10px;
+      background-color: #ffffff;
       box-shadow: 5px 5px 5px #999;
+      border-radius: 4px;
       .article-box-left{
         margin-right: 20px;
         width: 150px;
@@ -27,6 +29,7 @@
           position: absolute;
           bottom: 0;
           width: 100%;
+          font-size: 20px;
         }
       }
     }

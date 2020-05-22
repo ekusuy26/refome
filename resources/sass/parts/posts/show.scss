@@ -10,6 +10,7 @@
       width: 70%;
       margin-left: 25px;
       .post-show-title{
+        border-radius: 4px;
         position: relative;
         background: #fff0cd;
         box-shadow: 0px 0px 0px 5px #fff0cd;
@@ -37,6 +38,7 @@
         justify-content: space-between;
         margin-top: 25px;
         .post-show-body{
+          border-radius: 4px;
           width: 48%;
           position: relative;
           background: #fff0cd;
@@ -64,10 +66,6 @@
         .post-show-body p {
           margin: 0; 
           padding: 0;
-        }
-        .post-show-material{
-          background-color: green;
-          width: 40%;
         }
       }
     }

@@ -15,7 +15,8 @@
             <div class="article-data">【作成者】{{ $article->user->name }}</div>
             <div class="article-data">【作成日】{{ $article->created_at->format('Y/m/d') }}</div>
           </div>
-          <div class="article-like text-right mb-2">いいね！
+          <div class="article-like text-right mb-2">
+          <i class="fas fa-heart" style="color:red"></i>
             <span class="badge badge-pill badge-success">{{ $article->favorite_users()->count() }}</span>
           </div>
         </div>
