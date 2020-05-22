@@ -42,7 +42,14 @@ class PostController extends Controller
     public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
-        return view('auth.posts.show', compact('article'));
+
+        $count_favorite_users = $article->favorite_users()->count();
+
+        $data=[
+               'count_favorite_users'=>$count_favorite_users,
+              ];
+
+        return view('auth.posts.show', compact('article', 'data'));
     }
 
 }
