@@ -14,10 +14,13 @@
           <div class="article-data">{{ $article->user_id }}</div>
           <div class="article-data">{{ $article->created_at }}</div>
         </div>
+        <div class="text-right mb-2">いいね！
+        <span class="badge badge-pill badge-success">{{ $article->favorite_users()->count() }}</span>
       </div>
     </div>
-    @endforeach
   </div>
+  @endforeach
+</div>
 </div>
 
 @endsection
