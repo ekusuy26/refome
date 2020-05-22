@@ -11,12 +11,22 @@
       box-shadow: 5px 5px 5px #999;
       .article-box-left{
         margin-right: 20px;
+        width: 150px;
       }
       .article-box-right{
         color: #808080;
+        width: calc(100% - 150px);
+        height: 150px;
+        padding: 20px 0;
+        position: relative;
         .article-title{
           text-decoration: none;
           color: #808080;
+        }
+        .article-like{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
         }
       }
     }

@@ -11048,15 +11048,26 @@ nav #Navber .navbar-nav .nav-item #post-link {
 
 .posts-wrapper .post-wrapper .article-box .article-box-left {
   margin-right: 20px;
+  width: 150px;
 }
 
 .posts-wrapper .post-wrapper .article-box .article-box-right {
   color: #808080;
+  width: calc(100% - 150px);
+  height: 150px;
+  padding: 20px 0;
+  position: relative;
 }
 
 .posts-wrapper .post-wrapper .article-box .article-box-right .article-title {
   text-decoration: none;
   color: #808080;
+}
+
+.posts-wrapper .post-wrapper .article-box .article-box-right .article-like {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .post-new-wrapper {

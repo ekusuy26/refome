@@ -9,18 +9,18 @@
         <img src="{{ asset('/storage/img/'.$article->image) }}" style="height: 150px; width: 150px">
       </div>
       <div class="article-box-right">
-        <a class="article-title" href="/posts/{{$article->id}}">{{ $article->title }}</a>
+        <a class="article-title" href="/posts/{{$article->id}}">【料理名】{{ $article->title }}</a>
         <div class="article-details">
-          <div class="article-data">{{ $article->user->name }}</div>
-          <div class="article-data">{{ $article->created_at }}</div>
+          <div class="article-data">【作成者】{{ $article->user->name }}</div>
+          <div class="article-data">【作成日】{{ $article->created_at->format('Y/m/d') }}</div>
         </div>
-        <div class="text-right mb-2">いいね！
-        <span class="badge badge-pill badge-success">{{ $article->favorite_users()->count() }}</span>
+        <div class="article-like text-right mb-2">いいね！
+          <span class="badge badge-pill badge-success">{{ $article->favorite_users()->count() }}</span>
+        </div>
       </div>
     </div>
+    @endforeach
   </div>
-  @endforeach
-</div>
 </div>
 
 @endsection
