@@ -5,6 +5,13 @@
     .post-show-box-left{
       width: 30%;
       margin-right: 10px;
+      .post-show-img{
+        height: 300px;
+        width: 300px;
+        border-radius: 4px;
+        margin: 0 auto;
+        display: block;
+      }
     }
     .post-show-box-right{
       width: 70%;

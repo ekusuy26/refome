@@ -11129,6 +11129,14 @@ nav #Navber .navbar-nav .nav-item #post-link {
   margin-right: 10px;
 }
 
+.post-show-wrapper .post-show-box .post-show-box-left .post-show-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+}
+
 .post-show-wrapper .post-show-box .post-show-box-right {
   width: 70%;
   margin-left: 25px;
