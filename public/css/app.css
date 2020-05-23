@@ -11012,6 +11012,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
   background-size: contain;
   background-repeat: no-repeat;
   height: calc(100vh - 100px);
+  min-height: 600px;
   margin: 0px auto;
   padding: 20px;
 }
@@ -11128,6 +11129,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
 
 .post-new-wrapper .post-new-box .post-new-box-right .post-new-detail .post-new-material .post-new-material-box {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .post-new-wrapper .post-new-box .post-new-box-right .post-new-detail .post-new-material .post-page-footer {
