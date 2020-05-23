@@ -50,6 +50,7 @@ class PostController extends Controller
     public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
+        $foods = Food::where('post_id', $id)->get();
 
         $count_favorite_users = $article->favorite_users()->count();
 
@@ -57,7 +58,7 @@ class PostController extends Controller
                'count_favorite_users'=>$count_favorite_users,
               ];
 
-        return view('auth.posts.show', compact('article', 'count_favorite_users'));
+        return view('auth.posts.show', compact('article', 'foods', 'count_favorite_users'));
     }
 
 }
