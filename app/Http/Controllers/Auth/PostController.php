@@ -15,6 +15,12 @@ class PostController extends Controller
         $articles = Post::orderBy('created_at', 'asc')->get();
         return view('auth.posts.index', compact('articles'));
     }
+
+    public function showLike()
+    {
+        $articles = Post::orderBy('created_at', 'asc')->get();
+        return view('auth.posts.index', compact('articles'));
+    }
     
     public function index()
     {

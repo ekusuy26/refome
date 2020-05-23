@@ -26,7 +26,7 @@ Route::post('/foods/delete', 'Auth\FoodController@foodDelete')->name('foods.dele
 Route::get('/posts/new', 'Auth\PostController@index')->name('posts.new');
 Route::post('/posts/new', 'Auth\PostController@postArticle')->name('posts.new.posts');
 
-Route::get('/mypage', 'FavoriteController@showLike')->name('like');
+Route::get('/mypage', 'Auth\PostController@showLike')->name('like');
 
 Route::get('/posts/{id}', 'Auth\PostController@showArticle')->name('item');
 
