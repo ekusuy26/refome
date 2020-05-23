@@ -5,25 +5,31 @@
   <div class="post-show-box mx-auto">
     <div class="post-show-box-left">
       <img class="post-show-img" src="{{ asset('/storage/img/'.$article->image) }}">
-      @if (Auth::id() != $article->user_id)
+      <div class="like-box">
+        <div class="like-box-left">
+          @if (Auth::id() != $article->user_id)
 
-      @if (Auth::user()->is_favorite($article->id))
+          @if (Auth::user()->is_favorite($article->id))
 
-      {!! Form::open(['route' => ['favorites.unfavorite', $article->id], 'method' => 'delete']) !!}
-      {!! Form::submit('いいね！を外す', ['class' => "button btn btn-warning"]) !!}
-      {!! Form::close() !!}
+          {!! Form::open(['route' => ['favorites.unfavorite', $article->id], 'method' => 'delete']) !!}
+          {!! Form::submit('いいね！を外す', ['class' => "button btn btn-warning"]) !!}
+          {!! Form::close() !!}
 
-      @else
+          @else
 
-      {!! Form::open(['route' => ['favorites.favorite', $article->id]]) !!}
-      {!! Form::submit('いいね！を付ける', ['class' => "button btn btn-success"]) !!}
-      {!! Form::close() !!}
+          {!! Form::open(['route' => ['favorites.favorite', $article->id]]) !!}
+          {!! Form::submit('いいね！を付ける', ['class' => "button btn btn-success"]) !!}
+          {!! Form::close() !!}
 
-      @endif
+          @endif
 
-      @endif
-      <div class="text-right mb-2">いいね！
-        <span class="badge badge-pill badge-success">{{ $count_favorite_users }}</span>
+          @endif
+        </div>
+        <div class="like-box-right">
+          <div class="text-right mb-2">いいね！
+            <span class="badge badge-pill badge-success">{{ $count_favorite_users }}</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="post-show-box-right">
