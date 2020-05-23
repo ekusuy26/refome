@@ -5,6 +5,14 @@
     .post-new-box-left{
       width: 30%;
       margin-right: 10px;
+      .img-preview{
+        text-align: center;
+        padding: 15px 0;
+        .is-img{
+          height: 300px;
+          width: 300px;
+        }
+      }
     }
     .post-new-box-right{
       width: 70%;

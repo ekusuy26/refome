@@ -8,7 +8,7 @@
             <div class="post-new-box-left">
                 <input type="file" class="form-control" id="img-file" name="image">
                 <div class="img-preview" id="img-preview">
-                    <img id="thumbnail" class="img-preview_content" style="height:300px; width:300px; " accept="image/*" src="">
+                    <img id="thumbnail" class="img-preview_content" accept="image/*" src="">
                 </div>
             </div>
             <div class="post-new-box-right">

@@ -11087,6 +11087,16 @@ nav #Navber .navbar-nav .nav-item #post-link {
   margin-right: 10px;
 }
 
+.post-new-wrapper .post-new-box .post-new-box-left .img-preview {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.post-new-wrapper .post-new-box .post-new-box-left .img-preview .is-img {
+  height: 300px;
+  width: 300px;
+}
+
 .post-new-wrapper .post-new-box .post-new-box-right {
   width: 70%;
 }
