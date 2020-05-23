@@ -44,9 +44,25 @@ class PostController extends Controller
             Food::create([
                'user_id' => Auth::user()->id,
                'post_id' => $article->id,
-               'name' => $request->name,
-               'quantity' => $request->quantity,
+               'name' => $request->name1,
+               'quantity' => $request->quantity1,
                 ]);
+            if (!empty($request->name2)) {
+                Food::create([
+                   'user_id' => Auth::user()->id,
+                   'post_id' => $article->id,
+                   'name' => $request->name2,
+                   'quantity' => $request->quantity2,
+                    ]);
+            }
+            if (!empty($request->name2)) {
+                Food::create([
+                   'user_id' => Auth::user()->id,
+                   'post_id' => $article->id,
+                   'name' => $request->name3,
+                   'quantity' => $request->quantity3,
+                    ]);
+            }
                 
                 return redirect("/posts/{$article->id}")->with(['success'=> 'ファイルを保存しました']);
         }

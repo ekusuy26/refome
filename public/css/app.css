@@ -11030,6 +11030,12 @@ nav #Navber .navbar-nav .nav-item #post-link {
   padding: 0 15px;
 }
 
+.post-button {
+  margin-top: 30px;
+  background-color: #FF9900;
+  color: #ffffff;
+}
+
 .posts-wrapper {
   padding: 50px 0;
   height: 100vh;
@@ -11118,6 +11124,10 @@ nav #Navber .navbar-nav .nav-item #post-link {
   margin-left: 10px;
   width: 60%;
   position: relative;
+}
+
+.post-new-wrapper .post-new-box .post-new-box-right .post-new-detail .post-new-material .post-new-material-box {
+  display: flex;
 }
 
 .post-new-wrapper .post-new-box .post-new-box-right .post-new-detail .post-new-material .post-page-footer {
@@ -11236,6 +11246,10 @@ nav #Navber .navbar-nav .nav-item #post-link {
 .post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body p {
   margin: 0;
   padding: 0;
+}
+
+.food-regist-wrap {
+  margin-top: 50px;
 }
 
 .food-wrap {

@@ -29,6 +29,9 @@
           margin-left: 10px;
           width: 60%;
           position: relative;
+          .post-new-material-box{
+            display: flex;
+          }
           .post-page-footer{
             position: absolute;
             bottom: 0;

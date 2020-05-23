@@ -19,11 +19,19 @@
                     <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body"></textarea>
                     <div class="post-new-material">
                         <div class="post-new-material-box">
-                            <input type="text" class="form-control" placeholder="材料" name="name">
-                            <input type="text" class="form-control" placeholder="数量" name="quantity">
+                            <input type="text" class="form-control" placeholder="材料" name="name1">
+                            <input type="text" class="form-control" placeholder="数量" name="quantity1">
+                        </div>
+                        <div class="post-new-material-box">
+                            <input type="text" class="form-control" placeholder="材料" name="name2">
+                            <input type="text" class="form-control" placeholder="数量" name="quantity2">
+                        </div>
+                        <div class="post-new-material-box">
+                            <input type="text" class="form-control" placeholder="材料" name="name3">
+                            <input type="text" class="form-control" placeholder="数量" name="quantity3">
                         </div>
                         <div class="post-page-footer">
-                            <input type="submit" class="post-button" value="レシピを投稿">
+                            <input type="submit" class="post-button btn-lg" value="レシピを投稿">
                         </div>
                     </div>
                 </div>
