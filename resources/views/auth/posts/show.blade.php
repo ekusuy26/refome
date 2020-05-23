@@ -4,7 +4,7 @@
 <div class="post-show-wrapper">
   <div class="post-show-box mx-auto">
     <div class="post-show-box-left">
-      <img src="{{ asset('/storage/img/'.$article->image) }}" style="width: 100%; border-radius: 4px;">
+      <img class="post-show-img" src="{{ asset('/storage/img/'.$article->image) }}" style="height: 300px; width: 300px; border-radius: 4px;">
       @if (Auth::id() != $article->user_id)
 
       @if (Auth::user()->is_favorite($article->id))
