@@ -52,6 +52,15 @@
               border-bottom: dashed 3px #87CEFA;
             }
           }
+          .post-show-material-box{
+            display: flex;
+            width: 100%;
+            padding: 10px 0;
+            .post-show-material{
+              width: 50%;
+              text-align: center;
+            }
+          }
         }
         .post-show-body:after{
           position: absolute;

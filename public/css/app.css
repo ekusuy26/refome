@@ -11185,6 +11185,17 @@ nav #Navber .navbar-nav .nav-item #post-link {
   border-bottom: dashed 3px #87CEFA;
 }
 
+.post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body .post-show-material-box {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body .post-show-material-box .post-show-material {
+  width: 50%;
+  text-align: center;
+}
+
 .post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body:after {
   position: absolute;
   content: "";
