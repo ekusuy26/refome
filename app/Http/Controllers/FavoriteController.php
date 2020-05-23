@@ -17,4 +17,10 @@ class FavoriteController extends Controller
             \Auth::user()->unfavorite($id);
             return back();
     }
+
+    public function showLike()
+    {
+        $articles = Post::orderBy('created_at', 'asc')->get();
+        return view('auth.users.index', compact('articles'));
+    }
 }
