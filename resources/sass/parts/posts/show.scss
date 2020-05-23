@@ -12,6 +12,11 @@
         margin: 0 auto;
         display: block;
       }
+      .like-box{
+        display: flex;
+        .like-box-left{}
+        .like-box-right{}
+      }
     }
     .post-show-box-right{
       width: 70%;
