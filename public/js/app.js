@@ -37229,6 +37229,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./parts/food */ "./resources/js/parts/food.js");
 
+__webpack_require__(/*! ./parts/preview */ "./resources/js/parts/preview.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37285,6 +37287,35 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 $(function () {
   $("#title-input").on("keyup", function () {// alert('こんにちは');
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/parts/preview.js":
+/*!***************************************!*\
+  !*** ./resources/js/parts/preview.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $("#test").on('change', function (e) {
+    var reader;
+
+    if (e.target.files.length) {
+      reader = new FileReader();
+
+      reader.onload = function (e) {
+        var userThumbnail;
+        userThumbnail = document.getElementById('thumbnail');
+        $("#userImgPreview").addClass("is-active");
+        $("#thumbnail").addClass("is-img");
+        userThumbnail.setAttribute('src', e.target.result);
+      };
+
+      return reader.readAsDataURL(e.target.files[0]);
+    }
   });
 });
 
