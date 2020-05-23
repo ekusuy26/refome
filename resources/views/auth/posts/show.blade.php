@@ -35,7 +35,12 @@
         </div>
         <div class="post-show-body">
           <div class="post-show-body-text"><span class="under">　材料　</span></div>
-          {{$article->material}}
+          @foreach ($foods as $food)
+          <div class="post-show-material-box">
+            <div class="post-show-material">{{$food->name}}</div>
+            <div class="post-show-material">{{$food->quantity}}</div>
+          </div>
+          @endforeach
         </div>
       </div>
     </div>
