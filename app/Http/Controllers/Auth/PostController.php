@@ -27,18 +27,19 @@ class PostController extends Controller
             
             $path = $request->file('image')->store('public/img');
 
-            Food::create([
-               'user_id' => Auth::user()->id,
-               'name' => $request->name,
-               'quantity' => $request->quantity,
-            ]);
-
             $article = Post::create([
                 'user_id' => Auth::user()->id,
                 'title' => $request->title,
                 'image' => basename($path),
                 'material' => Auth::user()->id,
                 'body' => $request->body,
+                ]);
+
+            Food::create([
+               'user_id' => Auth::user()->id,
+               'post_id' => $article->id,
+               'name' => $request->name,
+               'quantity' => $request->quantity,
                 ]);
                 
                 return redirect("/posts/{$article->id}")->with(['success'=> 'ファイルを保存しました']);

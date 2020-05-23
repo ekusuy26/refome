@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Food extends Model
 {
     // データの追加や更新が可能
-    protected $fillable = ['user_id', 'name', 'quantity'];
+    protected $fillable = ['user_id', 'post_id', 'name', 'quantity'];
     protected $table = 'foods';
 }
