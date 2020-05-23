@@ -30,7 +30,7 @@
         {{ Auth::user()->name }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">マイページ</a>
+          <a class="dropdown-item" href="/mypage">マイページ</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">設定</a>
           <div class="dropdown-divider"></div>
