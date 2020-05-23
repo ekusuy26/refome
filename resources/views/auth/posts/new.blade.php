@@ -6,10 +6,10 @@
         @csrf
         <div class="post-new-box mx-auto" style="width: 80%;">
             <div class="post-new-box-left">
-                <input type="file" class="form-control" id="test" name="image">
-                <div class="userImgPreview" id="userImgPreview">
-              <img id="thumbnail" class="userImgPreview_content" accept="image/*" src="">
-            </div>
+                <input type="file" class="form-control" id="img-file" name="image">
+                <div class="img-preview" id="img-preview">
+                    <img id="thumbnail" class="img-preview_content" style="height:300px; width:300px; " accept="image/*" src="">
+                </div>
             </div>
             <div class="post-new-box-right">
                 <div class="post-new-title">

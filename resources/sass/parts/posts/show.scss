@@ -16,8 +16,7 @@
         display: flex;
         justify-content: space-around;
         padding: 30px;
-        .like-box-left{}
-        .like-box-right{}
+        align-items: baseline;
       }
     }
     .post-show-box-right{

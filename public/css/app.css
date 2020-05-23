@@ -11139,7 +11139,9 @@ nav #Navber .navbar-nav .nav-item #post-link {
 
 .post-show-wrapper .post-show-box .post-show-box-left .like-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 30px;
+  align-items: baseline;
 }
 
 .post-show-wrapper .post-show-box .post-show-box-right {

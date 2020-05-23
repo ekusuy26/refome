@@ -37300,7 +37300,7 @@ $(function () {
 /***/ (function(module, exports) {
 
 $(function () {
-  $("#test").on('change', function (e) {
+  $("#img-file").on('change', function (e) {
     var reader;
 
     if (e.target.files.length) {
@@ -37309,7 +37309,7 @@ $(function () {
       reader.onload = function (e) {
         var userThumbnail;
         userThumbnail = document.getElementById('thumbnail');
-        $("#userImgPreview").addClass("is-active");
+        $("#img-preview").addClass("is-active");
         $("#thumbnail").addClass("is-img");
         userThumbnail.setAttribute('src', e.target.result);
       };
