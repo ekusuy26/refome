@@ -17,9 +17,4 @@ class FavoriteController extends Controller
             \Auth::user()->unfavorite($id);
             return back();
     }
-
-    public function showLike()
-    {
-        return view('auth.users.index');
-    }
 }
