@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
+use App\Food;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
@@ -25,12 +26,18 @@ class PostController extends Controller
         if ($request->isMethod('POST')) {
             
             $path = $request->file('image')->store('public/img');
- 
+
+            Food::create([
+               'user_id' => Auth::user()->id,
+               'name' => $request->name,
+               'quantity' => $request->quantity,
+            ]);
+
             $article = Post::create([
                 'user_id' => Auth::user()->id,
                 'title' => $request->title,
                 'image' => basename($path),
-                'material' => $request->material,
+                'material' => Auth::user()->id,
                 'body' => $request->body,
                 ]);
                 
