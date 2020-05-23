@@ -20,7 +20,6 @@ class FavoriteController extends Controller
 
     public function showLike()
     {
-        $articles = Post::orderBy('created_at', 'asc')->get();
-        return view('auth.users.index', compact('articles'));
+        return view('auth.users.index');
     }
 }
