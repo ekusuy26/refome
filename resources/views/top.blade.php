@@ -40,10 +40,12 @@
             <div class="food-data" style="width: 40%">数量</div>
         </div>
         @foreach ($foodQuantities as $key => $foodQuantity)
+        @if ($foodQuantity != 0)
         <div class="food-box">
             <div class="food-data" style="width: 60%">{{ $key }}</div>
             <div class="food-data" style="width: 40%">{{ $foodQuantity }}</div>
         </div>
+        @endif
         @endforeach
     </div>
 </div>
