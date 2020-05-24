@@ -1,7 +1,6 @@
 .top-wrapper {
   background-color: #F6F6F6;
   padding: 40px 0px;
-  height: 100vh;
   .foods-wrapper {
     background-image: url('../images/refrigerator.png');
     background-size: contain;
@@ -10,16 +9,19 @@
     min-height: 600px;
     margin: 0px auto;
     padding: 20px;
-    .food-box {
-      width: 85%;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      .food-data {
-        background-color:rgba(246,246,246,0.6);
-        border-bottom: solid 3px #F6F6F6;
-        padding: 0 15px;
+    .food-box-wrap{
+      background-color:rgba(246,246,246,0.7);
+      height: 100%;
+      .food-box {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        .food-data {
+          border-bottom: solid 3px #F6F6F6;
+          padding: 0 15px;
+          text-align: center;
+        }
       }
     }
   }

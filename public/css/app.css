@@ -11004,7 +11004,6 @@ nav #Navber .navbar-nav .nav-item #post-link {
 .top-wrapper {
   background-color: #F6F6F6;
   padding: 40px 0px;
-  height: 100vh;
 }
 
 .top-wrapper .foods-wrapper {
@@ -11017,18 +11016,22 @@ nav #Navber .navbar-nav .nav-item #post-link {
   padding: 20px;
 }
 
-.top-wrapper .foods-wrapper .food-box {
-  width: 85%;
+.top-wrapper .foods-wrapper .food-box-wrap {
+  background-color: rgba(246, 246, 246, 0.7);
+  height: 100%;
+}
+
+.top-wrapper .foods-wrapper .food-box-wrap .food-box {
   margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-.top-wrapper .foods-wrapper .food-box .food-data {
-  background-color: rgba(246, 246, 246, 0.6);
+.top-wrapper .foods-wrapper .food-box-wrap .food-box .food-data {
   border-bottom: solid 3px #F6F6F6;
   padding: 0 15px;
+  text-align: center;
 }
 
 .post-button {

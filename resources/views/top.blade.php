@@ -35,7 +35,7 @@
 @else
 <div class="top-wrapper">
     <div class="foods-wrapper col-md-6">
-        <div class="food-box-wrap">
+        <div class="food-box-wrap mx-auto" style="width:80%">
             <div class="food-box">
                 <div class="food-data" style="width: 60%">食材名</div>
                 <div class="food-data" style="width: 40%">数量</div>
