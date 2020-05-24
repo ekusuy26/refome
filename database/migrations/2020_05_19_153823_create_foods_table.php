@@ -18,7 +18,7 @@ class CreateFoodsTable extends Migration
             $table->string('name');
             $table->integer('quantity');
             $table->bigInteger('user_id')->unsigned()->index();
-            $table->integer('post_id');
+            $table->integer('post_id')->default('0');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
