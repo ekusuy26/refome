@@ -11008,7 +11008,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
 
 .top-wrapper .foods-wrapper {
   background-image: url(/images/refrigerator.png?31733174ae3a340dfd49618760e9b87a);
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   height: calc(100vh - 100px);
   min-height: 600px;
