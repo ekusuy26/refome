@@ -44,7 +44,7 @@
           @foreach ($foods as $food)
           <div class="post-show-material-box">
             <div class="post-show-material">{{$food->name}}</div>
-            <div class="post-show-material">{{$food->quantity}}</div>
+            <div class="post-show-material">{{abs($food->quantity)}}</div>
           </div>
           @endforeach
         </div>
