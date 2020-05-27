@@ -34,6 +34,7 @@
 </div>
 @else
 <div class="top-wrapper">
+  これはテストです
     <div class="foods-wrapper col-md-6">
         <div class="food-box-wrap mx-auto" style="width:80%">
             <div class="food-box">
