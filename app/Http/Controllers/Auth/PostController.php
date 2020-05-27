@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Food;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
