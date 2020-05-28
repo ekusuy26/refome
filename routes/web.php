@@ -40,3 +40,5 @@ Route::group(['middleware'=>'auth'],function(){
 });
 
 Route::post('/posts/delete/{id}', 'Auth\PostController@delete');
+
+Route::get('/posts/edit/{id}', 'Auth\PostController@edit');
