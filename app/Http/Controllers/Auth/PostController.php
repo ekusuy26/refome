@@ -22,7 +22,7 @@ class PostController extends Controller
         $articles = Post::orderBy('created_at', 'asc')->get();
         return view('auth.posts.index', compact('articles'));
     }
-    
+
     public function index()
     {
         return view('auth.posts.new');
@@ -32,14 +32,14 @@ class PostController extends Controller
     {
         if ($request->isMethod('POST')) {
             // if ( app()->isLocal() || app()->runningUnitTests() ) {
-                $path = $request->file('image')->store('public/img');
-                $article = Post::create([
-                    'user_id' => Auth::user()->id,
-                    'title' => $request->title,
-                    'image' => basename($path),
-                    'material' => Auth::user()->id,
-                    'body' => $request->body,
-                    ]);
+            $path = $request->file('image')->store('public/img');
+            $article = Post::create([
+                'user_id' => Auth::user()->id,
+                'title' => $request->title,
+                'image' => basename($path),
+                'material' => Auth::user()->id,
+                'body' => $request->body,
+            ]);
             // }
             // else {
             //     $image = $request->file('image');
@@ -54,33 +54,33 @@ class PostController extends Controller
             // }
 
             Food::create([
-               'user_id' => Auth::user()->id,
-               'post_id' => $article->id,
-               'name' => $request->name1,
-               'quantity' => -($request->quantity1),
+                'user_id' => Auth::user()->id,
+                'post_id' => $article->id,
+                'name' => $request->name1,
+                'quantity' => - ($request->quantity1),
+            ]);
+            if (!empty($request->name2)) {
+                Food::create([
+                    'user_id' => Auth::user()->id,
+                    'post_id' => $article->id,
+                    'name' => $request->name2,
+                    'quantity' => - ($request->quantity2),
                 ]);
-            if (!empty($request->name2)) {
-                Food::create([
-                   'user_id' => Auth::user()->id,
-                   'post_id' => $article->id,
-                   'name' => $request->name2,
-                   'quantity' => -($request->quantity2),
-                    ]);
             }
             if (!empty($request->name2)) {
                 Food::create([
-                   'user_id' => Auth::user()->id,
-                   'post_id' => $article->id,
-                   'name' => $request->name3,
-                   'quantity' => -($request->quantity3),
-                    ]);
+                    'user_id' => Auth::user()->id,
+                    'post_id' => $article->id,
+                    'name' => $request->name3,
+                    'quantity' => - ($request->quantity3),
+                ]);
             }
-                
-                return redirect("/posts/{$article->id}")->with(['success'=> 'ファイルを保存しました']);
+
+            return redirect("/posts/{$article->id}")->with(['success' => 'ファイルを保存しました']);
         }
         return view('posts.new');
     }
-    
+
     public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
@@ -88,11 +88,16 @@ class PostController extends Controller
 
         $count_favorite_users = $article->favorite_users()->count();
 
-        $data=[
-               'count_favorite_users'=>$count_favorite_users,
-              ];
+        $data = [
+            'count_favorite_users' => $count_favorite_users,
+        ];
 
         return view('auth.posts.show', compact('article', 'foods', 'count_favorite_users'));
     }
 
+    public function delete(Request $request)
+    {
+        Post::find($request->id)->delete();
+        return redirect('/posts');
+    }
 }
