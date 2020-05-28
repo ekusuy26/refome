@@ -107,9 +107,14 @@ class PostController extends Controller
         return view('auth.posts.edit', compact('article'));
     }
 
-    public function foodEdit(Request $request, $id)
+    public function foodEdit(Request $request)
     {
-        $article = Post::find($id);
-        return view('auth.posts.edit', compact('article'));
+        $article = Post::find($request->id);
+        $form = $request->all();
+        unset($form['_token']);
+        $article->title = $request->title;
+        $article->body = $request->body;
+        $article->save();
+        return view('auth.posts.new');
     }
 }

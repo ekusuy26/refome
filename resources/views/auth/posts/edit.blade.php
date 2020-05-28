@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="post-new-wrapper">
-    <form class="post-page-wrapper" action="/posts/edit/{$article->id}" method="post" enctype="multipart/form-data">
+    <form class="post-page-wrapper" action="/posts/edit/{{$article->id}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="post-new-box mx-auto" style="width: 80%;">
             <div class="post-new-box-left">
