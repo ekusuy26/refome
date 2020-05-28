@@ -32,18 +32,7 @@ class PostController extends Controller
     {
         if ($request->isMethod('POST')) {
             // if ( app()->isLocal() || app()->runningUnitTests() ) {
-            //     $path = $request->file('image')->store('public/img');
-            //     $article = Post::create([
-            //         'user_id' => Auth::user()->id,
-            //         'title' => $request->title,
-            //         'image' => basename($path),
-            //         'material' => Auth::user()->id,
-            //         'body' => $request->body,
-            //         ]);
-            // }
-            // else {
-                $image = $request->file('image');
-                $path = Storage::disk('s3')->put('myprefix', $image, 'public');
+                $path = $request->file('image')->store('public/img');
                 $article = Post::create([
                     'user_id' => Auth::user()->id,
                     'title' => $request->title,
@@ -51,6 +40,17 @@ class PostController extends Controller
                     'material' => Auth::user()->id,
                     'body' => $request->body,
                     ]);
+            // }
+            // else {
+            //     $image = $request->file('image');
+            //     $path = Storage::disk('s3')->put('myprefix', $image, 'public');
+            //     $article = Post::create([
+            //         'user_id' => Auth::user()->id,
+            //         'title' => $request->title,
+            //         'image' => basename($path),
+            //         'material' => Auth::user()->id,
+            //         'body' => $request->body,
+            //         ]);
             // }
 
             Food::create([
