@@ -103,7 +103,7 @@ class PostController extends Controller
 
     public function edit($id)
     {
-        $article = Post::find('id', $id);
+        $article = Post::where('id', $id);
         return view('auth.posts.edit', compact('article'));
     }
 }
