@@ -39,4 +39,4 @@ Route::group(['middleware'=>'auth'],function(){
   });
 });
 
-Route::post('/posts/delete/{id}', 'PostController@delete');
+Route::post('/posts/delete/{id}', 'Auth\PostController@delete');

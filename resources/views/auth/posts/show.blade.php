@@ -35,7 +35,7 @@
           </div>
         </div>
       </div>
-      <form method="post" action="/article/delete/{{$article->id}}">
+      <form method="post" action="/posts/delete/{{$article->id}}">
         {{ csrf_field() }}
         <input type="submit" value="削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
       </form>
