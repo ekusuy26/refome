@@ -37,11 +37,11 @@
       </div>
       <form method="post" action="/posts/delete/{{$article->id}}">
         {{ csrf_field() }}
-        <input type="submit" value="削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
+        <input type="submit" value="削除" class="btn btn-primary btn-sm" onclick='return confirm("本当に削除しますか？");'>
       </form>
       <form method="get" action="/posts/edit/{{$article->id}}">
         {{ csrf_field() }}
-        <input type="submit" value="編集" class="btn btn-danger btn-sm">
+        <input type="submit" value="編集" class="btn btn-primary btn-sm">
       </form>
     </div>
     <div class="post-show-box-right">
