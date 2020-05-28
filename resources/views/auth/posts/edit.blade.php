@@ -16,19 +16,19 @@
                     <input type="text" class="form-control" id="title-input" placeholder="タイトル" name="title" value="{{$article->title}}">
                 </div>
                 <div class="post-new-detail">
-                    <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body" value="{{$article->body}}"></textarea>
+                    <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body">{{$article->body}}</textarea>
                     <div class="post-new-material">
                         <div class="post-new-material-box">
-                            <input type="text" class="form-control" placeholder="材料" name="name1" value="{{$article->name1}}">
-                            <input type="text" class="form-control" placeholder="数量" name="quantity1" value="{{$article->quantity1}}">
+                            <input type="text" class="form-control" placeholder="材料" name="name1">
+                            <input type="text" class="form-control" placeholder="数量" name="quantity1">
                         </div>
                         <div class="post-new-material-box">
-                            <input type="text" class="form-control" placeholder="材料" name="name2" value="{{$article->name2}}">
-                            <input type="text" class="form-control" placeholder="数量" name="quantity2" value="{{$article->quantity2}}">
+                            <input type="text" class="form-control" placeholder="材料" name="name2">
+                            <input type="text" class="form-control" placeholder="数量" name="quantity2">
                         </div>
                         <div class="post-new-material-box">
-                            <input type="text" class="form-control" placeholder="材料" name="name3" value="{{$article->name3}}">
-                            <input type="text" class="form-control" placeholder="数量" name="quantity3" value="{{$article->quantity3}}">
+                            <input type="text" class="form-control" placeholder="材料" name="name3">
+                            <input type="text" class="form-control" placeholder="数量" name="quantity3">
                         </div>
                         <div class="post-page-footer">
                             <input type="submit" class="post-button btn-lg" value="レシピを投稿">
