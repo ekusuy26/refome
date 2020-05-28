@@ -115,6 +115,6 @@ class PostController extends Controller
         $article->title = $request->title;
         $article->body = $request->body;
         $article->save();
-        return view('auth.posts.new');
+        return redirect("/posts/{$article->id}")->with(['success' => 'レシピを更新しました']);
     }
 }
