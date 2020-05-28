@@ -35,6 +35,10 @@
           </div>
         </div>
       </div>
+      <form method="post" action="/article/delete/{{$article->id}}">
+        {{ csrf_field() }}
+        <input type="submit" value="削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
+      </form>
     </div>
     <div class="post-show-box-right">
       <div class="post-show-title">{{$article->title}}</div>
