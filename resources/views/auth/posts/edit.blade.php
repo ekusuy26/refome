@@ -12,9 +12,8 @@
                 </div>
             </div>
             <div class="post-new-box-right">
-                    {{ $article->title }}
                 <div class="post-new-title">
-                    <input type="text" class="form-control" id="title-input" placeholder="タイトル" name="title">
+                    <input type="text" class="form-control" id="title-input" placeholder="タイトル" name="title" value="{{$article->title}}">
                 </div>
                 <div class="post-new-detail">
                     <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body"></textarea>
