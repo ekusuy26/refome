@@ -106,4 +106,10 @@ class PostController extends Controller
         $article = Post::find($id);
         return view('auth.posts.edit', compact('article'));
     }
+
+    public function foodEdit(Request $request, $id)
+    {
+        $article = Post::find($id);
+        return view('auth.posts.edit', compact('article'));
+    }
 }
