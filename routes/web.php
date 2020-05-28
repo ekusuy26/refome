@@ -38,3 +38,5 @@ Route::group(['middleware'=>'auth'],function(){
      Route::delete('unfavorite','FavoriteController@destroy')->name('favorites.unfavorite');
   });
 });
+
+Route::post('/posts/delete/{id}', 'PostController@delete');
