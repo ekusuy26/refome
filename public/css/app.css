@@ -11180,6 +11180,10 @@ nav #Navber .navbar-nav .nav-item #post-link {
   align-items: baseline;
 }
 
+.post-show-wrapper .post-show-box .post-show-box-left .btn-box {
+  display: flex;
+}
+
 .post-show-wrapper .post-show-box .post-show-box-right {
   width: 70%;
   margin-left: 25px;

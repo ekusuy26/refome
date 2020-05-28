@@ -35,14 +35,16 @@
           </div>
         </div>
       </div>
-      <form method="post" action="/posts/delete/{{$article->id}}">
-        {{ csrf_field() }}
-        <input type="submit" value="削除" class="btn btn-primary" onclick='return confirm("本当に削除しますか？");'>
-      </form>
-      <form method="get" action="/posts/edit/{{$article->id}}">
-        {{ csrf_field() }}
-        <input type="submit" value="編集" class="btn btn-primary">
-      </form>
+      <div class="btn-box">
+        <form method="post" action="/posts/delete/{{$article->id}}">
+          {{ csrf_field() }}
+          <input type="submit" value="削除" class="btn btn-primary" onclick='return confirm("本当に削除しますか？");'>
+        </form>
+        <form method="get" action="/posts/edit/{{$article->id}}">
+          {{ csrf_field() }}
+          <input type="submit" value="編集" class="btn btn-primary">
+        </form>
+      </div>
     </div>
     <div class="post-show-box-right">
       <div class="post-show-title">{{$article->title}}</div>
