@@ -100,4 +100,10 @@ class PostController extends Controller
         Post::find($request->id)->delete();
         return redirect('/posts');
     }
+
+    public function edit($id)
+    {
+        $article = Post::find('id', $id);
+        return view('auth.posts.edit', compact('article'));
+    }
 }

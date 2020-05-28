@@ -39,7 +39,7 @@
         {{ csrf_field() }}
         <input type="submit" value="削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
       </form>
-      <form method="post" action="/posts/edit/{{$article->id}}">
+      <form method="get" action="/posts/edit/{{$article->id}}">
         {{ csrf_field() }}
         <input type="submit" value="編集" class="btn btn-danger btn-sm">
       </form>
