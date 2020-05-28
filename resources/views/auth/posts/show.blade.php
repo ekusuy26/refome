@@ -36,13 +36,13 @@
         </div>
       </div>
       <div class="btn-box">
-        <form method="post" action="/posts/delete/{{$article->id}}">
-          {{ csrf_field() }}
-          <input type="submit" value="削除" class="btn btn-primary" onclick='return confirm("本当に削除しますか？");'>
-        </form>
         <form method="get" action="/posts/edit/{{$article->id}}">
           {{ csrf_field() }}
           <input type="submit" value="編集" class="btn btn-primary">
+        </form>
+        <form method="post" action="/posts/delete/{{$article->id}}">
+          {{ csrf_field() }}
+          <input type="submit" value="削除" class="btn btn-primary" onclick='return confirm("本当に削除しますか？");'>
         </form>
       </div>
     </div>

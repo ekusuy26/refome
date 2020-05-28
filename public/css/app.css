@@ -11182,6 +11182,12 @@ nav #Navber .navbar-nav .nav-item #post-link {
 
 .post-show-wrapper .post-show-box .post-show-box-left .btn-box {
   display: flex;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.post-show-wrapper .post-show-box .post-show-box-left .btn-box .btn {
+  margin-right: 15px;
 }
 
 .post-show-wrapper .post-show-box .post-show-box-right {

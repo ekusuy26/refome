@@ -20,6 +20,11 @@
       }
       .btn-box{
         display: flex;
+        width: 300px;
+        margin: 0 auto;
+        .btn{
+          margin-right: 15px;
+        }
       }
     }
     .post-show-box-right{
