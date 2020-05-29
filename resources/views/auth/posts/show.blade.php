@@ -4,7 +4,7 @@
 <div class="post-show-wrapper">
   <div class="post-show-box mx-auto">
     <div class="post-show-box-left">
-      <img class="post-show-img" src="{{ $article->image }}">
+      <img class="post-show-img" src=" http://18.180.46.64/myprefix/{{$article->image }}">
       <div class="like-box">
         <div class="like-box-left">
           @if (Auth::id() != $article->user_id)

@@ -47,7 +47,7 @@ class PostController extends Controller
             $article = Post::create([
                 'user_id' => Auth::user()->id,
                 'title' => $request->title,
-                'image' => url($path),
+                'image' => basename($path),
                 'material' => Auth::user()->id,
                 'body' => $request->body,
             ]);
