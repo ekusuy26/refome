@@ -7,7 +7,7 @@
     <a href="/posts/{{$article->id}}" style="text-decoration:none;">
       <div class="article-box">
         <div class="article-box-left">
-          <img src="{{ asset('/storage/img/'.$article->image) }}" style="height: 150px; width: 150px">
+          <img src="https://refome20200527.s3-ap-northeast-1.amazonaws.com/myprefix/{{$article->image}}" style="height: 150px; width: 150px">
         </div>
         <div class="article-box-right">
           <div class="article-title">【料理名】{{ $article->title }}</div>
