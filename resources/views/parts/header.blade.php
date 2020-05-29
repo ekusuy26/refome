@@ -49,7 +49,7 @@
         <a class="nav-link text-white" id="register" href="/register">ユーザ登録</a>
       </li>
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" href="#">ログイン</a>
+        <a class="nav-link text-white" href="/">ログイン</a>
       </li>
       @endif
     </ul>
