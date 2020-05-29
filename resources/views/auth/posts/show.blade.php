@@ -31,6 +31,7 @@
           </div>
         </div>
       </div>
+      @if (Auth::id() == $article->user_id)
       <div class="btn-box">
         <form method="get" action="/posts/edit/{{$article->id}}">
           {{ csrf_field() }}
@@ -41,6 +42,7 @@
           <input type="submit" value="削除" class="btn btn-primary" onclick='return confirm("本当に削除しますか？");'>
         </form>
       </div>
+      @endif
     </div>
     <div class="post-show-box-right">
       <div class="post-show-title">{{$article->title}}</div>
