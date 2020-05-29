@@ -43,7 +43,7 @@ class PostController extends Controller
             // }
             // else {
             $image = $request->file('image');
-            $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+            $path = Storage::disk('s3')->put('myprefix', $image, 'public');
             $article = Post::create([
                 'user_id' => Auth::user()->id,
                 'title' => $request->title,
