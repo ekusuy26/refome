@@ -18,6 +18,13 @@
                 <div class="post-new-detail">
                     <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body">{{$article->body}}</textarea>
                     <div class="post-new-material">
+                        旧素材　数量(仮置き)
+                        @foreach ($foods as $food)
+                        <div class="post-new-material-box">
+                            <div class="kari">{{$food->name}}</div>
+                            <div class="kari">{{abs($food->quantity)}}</div>
+                        </div>
+                        @endforeach
                         <div class="post-new-material-box">
                             <input type="text" class="form-control" placeholder="材料" name="name1">
                             <input type="text" class="form-control" placeholder="数量" name="quantity1">
