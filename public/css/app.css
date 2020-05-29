@@ -10949,6 +10949,14 @@ body {
   font-size: 14px;
 }
 
+.logo {
+  background-image: url(/images/logo.png?375bc9ddc1f574db2ddfbd918f5bb07d);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 50px;
+}
+
 nav {
   background-color: #FFCC00 !important;
 }

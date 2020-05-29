@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Food;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,7 +20,7 @@ class PostController extends Controller
 
     public function showLike()
     {
-        $articles = Post::orderBy('created_at', 'asc')->get();
+        $articles = Post::with('favorite_users')->where('user_id', Auth::id())->get();
         return view('auth.posts.index', compact('articles'));
     }
 
