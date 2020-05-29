@@ -5,7 +5,6 @@
   <div class="post-show-box mx-auto">
     <div class="post-show-box-left">
       <img class="post-show-img" src="{{ $article->image }}">
-      @endif
       <div class="like-box">
         <div class="like-box-left">
           @if (Auth::id() != $article->user_id)
