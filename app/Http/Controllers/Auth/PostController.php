@@ -103,10 +103,18 @@ class PostController extends Controller
 
     public function foodEdit(Request $request)
     {
+        if (app()->isLocal()) {
+            // ローカル環境用
+            $path = $request->image->store('public/img');
+        }else {
+            $image = $request->file('image');
+            $path = Storage::disk('s3')->put('myprefix', $image, 'public');
+        }
         $article = Post::find($request->id);
         $form = $request->all();
         unset($form['_token']);
         $article->title = $request->title;
+        $article->image = basename($path);
         $article->body = $request->body;
         $article->save();
         return redirect("/posts/{$article->id}")->with(['success' => 'レシピを更新しました']);
