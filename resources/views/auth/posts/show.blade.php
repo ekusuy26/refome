@@ -4,9 +4,6 @@
 <div class="post-show-wrapper">
   <div class="post-show-box mx-auto">
     <div class="post-show-box-left">
-      @if (app()->isLocal() || app()->runningUnitTests())
-      <img class="post-show-img" src="{{ asset('/storage/img/'.$article->image) }}">
-      @else
       <img class="post-show-img" src="{{ $article->image }}">
       @endif
       <div class="like-box">
