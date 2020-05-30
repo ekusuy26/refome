@@ -51,14 +51,6 @@
                 @endforeach
                 <tr>
             </table>
-            <!-- <div class="food-box">
-                <div class="food-data" style="width: 60%">食材名</div>
-                <div class="food-data" style="width: 40%">数量</div>
-            </div> -->
-            <!-- <div class="food-box">
-                <div class="food-data" style="width: 60%">{{ $key }}</div>
-                <div class="food-data" style="width: 40%">{{ $foodQuantity }}</div>
-                </div> -->
         </div>
     </div>
 </div>
