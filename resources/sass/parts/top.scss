@@ -28,9 +28,8 @@
       table th{
         position: relative;
         text-align: left;
-        width: 70%;
+        width: 65%;
         background-color: #52c2d0;
-        color: white;
         text-align: center;
         padding: 10px 0;
       }
@@ -50,10 +49,19 @@
       
       table td{
         text-align: left;
-        width: 30%;
+        width: 35%;
         text-align: center;
         background-color: #eee;
         padding: 10px 0;
+      }
+      .food-name{
+        background-color:rgba(82,194,208,0.4);
+      }
+      .food-name::after{
+        border-left: 10px solid rgba(82,194,208,0.4);
+      }
+      .food-quantity{
+        background-color:rgba(238,238,238,0.4);
       }
       // .food-box {
       //   width: 75%;
