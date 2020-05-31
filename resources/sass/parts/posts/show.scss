@@ -69,7 +69,11 @@
           color: #454545;
           .post-show-body-text{
             text-align: center;
+            white-space: pre-wrap;
             .under{
+              display: block;
+              width: 100px;
+              margin: 0 auto;
               border-bottom: dashed 3px #87CEFA;
             }
           }
