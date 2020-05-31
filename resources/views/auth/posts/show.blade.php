@@ -48,8 +48,9 @@
       <div class="post-show-title">{{$article->title}}</div>
       <div class="post-show-detail">
         <div class="post-show-body">
-          <div class="post-show-body-text"><span class="under">　手順　</span></div>
-          {{$article->body}}
+          <div class="post-show-body-text"><span class="under">　手順　</span>
+            {{$article->body}}
+          </div>
         </div>
         <div class="post-show-body">
           <div class="post-show-body-text"><span class="under">　材料　</span></div>
