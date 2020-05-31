@@ -16,7 +16,7 @@
                     <input type="text" class="form-control" id="title-input" placeholder="タイトル" name="title">
                 </div>
                 <div class="post-new-detail">
-                    <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body"></textarea>
+                  <textarea cols="60" class="form-control" id="body-input" placeholder="説明文" name="body"></textarea>
                     <div class="post-new-material">
                         <div class="post-new-material-box">
                             <input type="text" class="form-control" placeholder="材料" name="name1">
