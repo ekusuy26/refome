@@ -61,7 +61,7 @@ class PostController extends Controller
                     'quantity' => - ($request->quantity2),
                 ]);
             }
-            if (!empty($request->name2)) {
+            if (!empty($request->name3)) {
                 Food::create([
                     'user_id' => Auth::user()->id,
                     'post_id' => $article->id,
