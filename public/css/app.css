@@ -11280,7 +11280,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
 
 .post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body .post-show-body-text {
   text-align: center;
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 .post-show-wrapper .post-show-box .post-show-box-right .post-show-detail .post-show-body .post-show-body-text .under {
