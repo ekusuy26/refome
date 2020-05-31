@@ -33,7 +33,7 @@
     </div>
 </div>
 <div id="logo-wrap" class="row">
-    <div class="login-logo"></div>
+    <div class="login-logo col-5"></div>
 </div>
 @else
 <div class="top-wrapper">
