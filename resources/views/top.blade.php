@@ -32,6 +32,9 @@
         </form>
     </div>
 </div>
+<div id="logo-wrap" class="row">
+    <div class="login-logo"></div>
+</div>
 @else
 <div class="top-wrapper">
     <div class="foods-wrapper col-md-6">
