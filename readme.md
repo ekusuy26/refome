@@ -10,7 +10,7 @@ refomeでは冷蔵庫に残っている食材を管理することが出来ま�
 
 ## テストアカウント
 * username【test】
-* Email   【test@test.com】
+* Email&nbsp;&nbsp;&nbsp;【test@test.com】
 * password【11111111】
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
