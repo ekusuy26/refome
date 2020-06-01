@@ -1,5 +1,5 @@
 # refome
-![トップページ](toppage.png)
+![トップページ](readme_img/toppage.png)
 
 ## 概要
 【本番環境】http://18.180.46.64/<br><br>
