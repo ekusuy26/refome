@@ -27,9 +27,9 @@ refomeでは冷蔵庫に残っている食材を管理することが出来ま�
 * ユーザー機能
 ユーザー登録、ログイン、ログアウトができます。<br>
 同じメールアドレスでは登録出来ない様になっております。
-冷蔵庫に食材を入れる、取り出す
-いいね機能
-レシピを投稿する
+* 冷蔵庫に食材を入れる、取り出す
+* いいね機能
+* レシピを投稿する
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
