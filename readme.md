@@ -35,8 +35,8 @@ refomeでは冷蔵庫に残っている食材を管理することが出来ま�
 気に入ったレシピにはいいねをつけることができます。<br>
 ![いいね1](readme_img/like1.png)
 ![いいね2](readme_img/like2.png)
-<img src="readme_img/like1.png" width="200"></img>
-<img src="readme_img/like2.png" width="200"></img>
+<img src="readme_img/like1.png" height="50" width="200"></img>
+<img src="readme_img/like2.png" height="50" width="200"></img>
 * レシピを投稿する<br>
 自分の作った料理をみんなにシェアできます。<br>
 使った食材は自動的に冷蔵庫から消費されます。
