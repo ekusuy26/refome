@@ -13,6 +13,16 @@ refomeでは冷蔵庫に残っている食材を管理することが出来ま�
 * Email&emsp;&emsp;【test@test.com】
 * password【11111111】
 
+## 開発環境
+* macOS Catalina10.15.5
+* PHP 7.3.11 
+* laravel/framework 6.18.15  
+* HTML/SCSS
+* JavaScript/JQuery
+* Bootstrap 4
+* mySQL5.6.47
+* AWS(EC2,S3,RDS)
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
