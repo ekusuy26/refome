@@ -14,7 +14,7 @@ class PostController extends Controller
 {
     public function showPostPage()
     {
-        $articles = Post::orderBy('created_at', 'asc')->get();
+        $articles = Post::orderBy('created_at', 'desc')->get();
         return view('auth.posts.index', compact('articles'));
     }
 
