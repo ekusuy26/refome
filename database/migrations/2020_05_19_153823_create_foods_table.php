@@ -18,10 +18,12 @@ class CreateFoodsTable extends Migration
             $table->string('name');
             $table->integer('quantity');
             $table->bigInteger('user_id')->unsigned()->index();
+            $table->bigInteger('category_id')->unsigned()->index();
             $table->integer('post_id')->default('0');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');
         });
     }
 
