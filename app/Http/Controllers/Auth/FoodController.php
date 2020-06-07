@@ -12,7 +12,7 @@ class FoodController extends Controller
 {
     public function showTopPage()
     {
-        $lists = array();
+        $foodLists = array();
         for ($categoryNum = 1; $categoryNum < 15; $categoryNum++) {
             $categoryName = Category::find($categoryNum)->name;
             $aggregate = Food::where('user_id', Auth::id())
@@ -24,8 +24,8 @@ class FoodController extends Controller
                 ->map(function ($value) {
                     return $value->sum('quantity');
                 });
-            array_push($lists, $categoryName);
-            array_push($lists, $aggregate);
+            array_push($foodLists, $categoryName);
+            array_push($foodLists, $aggregate);
         }
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
@@ -35,7 +35,7 @@ class FoodController extends Controller
             ->map(function ($value) {
                 return $value->sum('quantity');
             });
-        return view('top', compact('foodQuantities', 'categories'));
+        return view('top', compact('foodQuantities', 'categories', 'foodLists'));
     }
 
     public function index()
