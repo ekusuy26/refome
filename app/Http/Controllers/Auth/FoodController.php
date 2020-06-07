@@ -14,7 +14,9 @@ class FoodController extends Controller
     {
         $categories = Category::get();
         $lists = array();
+
         $categoryNum = 2;
+        $categoryName = Category::find($categoryNum)->name;
         $aaa = Food::where('user_id', Auth::id())
             ->where('category_id', $categoryNum)
             ->get()
@@ -24,9 +26,10 @@ class FoodController extends Controller
             ->map(function ($value) {
                 return $value->sum('quantity');
             });
-        array_push($lists, $categoryNum);
+        array_push($lists, $categoryName);
         array_push($lists, $aaa);
-        dd($lists);
+        
+        dd($categoryName);
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {
