@@ -12,11 +12,10 @@ class FoodController extends Controller
 {
     public function showTopPage()
     {
-        $categories = Category::get();
         $lists = array();
         for ($categoryNum = 1; $categoryNum < 15; $categoryNum++) {
             $categoryName = Category::find($categoryNum)->name;
-            $aaa = Food::where('user_id', Auth::id())
+            $aggregate = Food::where('user_id', Auth::id())
                 ->where('category_id', $categoryNum)
                 ->get()
                 ->groupBy(function ($row) {
@@ -26,9 +25,8 @@ class FoodController extends Controller
                     return $value->sum('quantity');
                 });
             array_push($lists, $categoryName);
-            array_push($lists, $aaa);
+            array_push($lists, $aggregate);
         }
-        dd($lists);
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {
