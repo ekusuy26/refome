@@ -13,6 +13,16 @@ class FoodController extends Controller
     public function showTopPage()
     {
         $categories = Category::get();
+        $aaa = Food::where('user_id', Auth::id())
+            ->where('category_id', 2)
+            ->get()
+            ->groupBy(function ($row) {
+                return $row->name;
+            })
+            ->map(function ($value) {
+                return $value->sum('quantity');
+            });
+        dd($aaa);
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {
@@ -79,20 +89,20 @@ class FoodController extends Controller
         Food::create([
             'user_id' => Auth::user()->id,
             'name' => $request->name1,
-            'quantity' => -($request->quantity1),
+            'quantity' => - ($request->quantity1),
         ]);
         if (!empty($request->name2)) {
             Food::create([
                 'user_id' => Auth::user()->id,
                 'name' => $request->name2,
-                'quantity' => -($request->quantity2),
+                'quantity' => - ($request->quantity2),
             ]);
         }
         if (!empty($request->name3)) {
             Food::create([
                 'user_id' => Auth::user()->id,
                 'name' => $request->name3,
-                'quantity' => -($request->quantity3),
+                'quantity' => - ($request->quantity3),
             ]);
         }
         return redirect('/');

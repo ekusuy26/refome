@@ -39,9 +39,6 @@
 <div class="top-wrapper">
     <div class="foods-wrapper col-md-6">
         <div class="food-box-wrap mx-auto" style="width:80%">
-        @foreach ($categories as $category)
-        {{ $category->name }}
-        @endforeach
             <table>
                 <tr>
                     <th>食材名</th>
