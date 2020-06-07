@@ -16,7 +16,7 @@
       @endif
     </div>
     <div class="food-wrap mx-auto m-1" style="width:50%">
-      <select class="food-box col-md-3" name="category1">
+      <select class="food-box col-md-3" name="category1" style="height:38px; margin-top:4px;">
         <option value="initial">選択してください</option>
         <option value="1">穀物・いも類</option>
         <option value="2">まめ類</option>
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="food-wrap mx-auto m-1" style="width:50%">
-      <select class="food-box col-md-3" name="category2">
+      <select class="food-box col-md-3" name="category2" style="height:38px; margin-top:4px;">
         <option value="0">選択してください</option>
         <option value="1">穀物・いも類</option>
         <option value="2">まめ類</option>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="food-wrap mx-auto m-1" style="width:50%">
-      <select class="food-box col-md-3" name="category3">
+      <select class="food-box col-md-3" name="category3" style="height:38px; margin-top:4px;">
         <option value="0">選択してください</option>
         <option value="1">穀物・いも類</option>
         <option value="2">まめ類</option>
