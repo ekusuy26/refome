@@ -14,22 +14,21 @@ class FoodController extends Controller
     {
         $categories = Category::get();
         $lists = array();
-
-        $categoryNum = 2;
-        $categoryName = Category::find($categoryNum)->name;
-        $aaa = Food::where('user_id', Auth::id())
-            ->where('category_id', $categoryNum)
-            ->get()
-            ->groupBy(function ($row) {
-                return $row->name;
-            })
-            ->map(function ($value) {
-                return $value->sum('quantity');
-            });
-        array_push($lists, $categoryName);
-        array_push($lists, $aaa);
-        
-        dd($categoryName);
+        for ($categoryNum = 1; $categoryNum < 15; $categoryNum++) {
+            $categoryName = Category::find($categoryNum)->name;
+            $aaa = Food::where('user_id', Auth::id())
+                ->where('category_id', $categoryNum)
+                ->get()
+                ->groupBy(function ($row) {
+                    return $row->name;
+                })
+                ->map(function ($value) {
+                    return $value->sum('quantity');
+                });
+            array_push($lists, $categoryName);
+            array_push($lists, $aaa);
+        }
+        dd($lists);
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {
