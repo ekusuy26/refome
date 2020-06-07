@@ -24,9 +24,9 @@ class FoodController extends Controller
                 ->map(function ($value) {
                     return $value->sum('quantity');
                 });
-            array_push($foodLists, $categoryName);
-            array_push($foodLists, $aggregate);
+            array_push($foodLists, array($categoryName, $aggregate));
         }
+        dd($foodLists);
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {
@@ -35,7 +35,7 @@ class FoodController extends Controller
             ->map(function ($value) {
                 return $value->sum('quantity');
             });
-        return view('top', compact('foodQuantities', 'categories', 'foodLists'));
+        return view('top', compact('foodQuantities', 'foodLists'));
     }
 
     public function index()
