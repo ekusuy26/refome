@@ -26,7 +26,6 @@ class FoodController extends Controller
                 });
             array_push($foodLists, array($categoryName, $aggregate));
         }
-        dd($foodLists);
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {

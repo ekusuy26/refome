@@ -39,6 +39,15 @@
 <div class="top-wrapper">
     <div class="foods-wrapper col-md-6">
         <div class="food-box-wrap mx-auto" style="width:80%">
+            @foreach ($foodLists as $foodList)
+            <div>{{$foodList[0]}}</div>
+            @foreach ($foodList[1] as $key => $food)
+            @if ($food != 0)
+            <div>{{$key}}</div>
+            <div>{{$food}}</div>
+            @endif
+            @endforeach
+            @endforeach
             <table>
                 <tr>
                     <th>食材名</th>
