@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Food;
+use App\Category;
 use Illuminate\Support\Facades\Auth;
 
 class FoodController extends Controller
 {
     public function showTopPage()
     {
+        $categories = Category::get();
         $foodQuantities = Food::where('user_id', Auth::id())
             ->get()
             ->groupBy(function ($row) {
@@ -19,7 +21,7 @@ class FoodController extends Controller
             ->map(function ($value) {
                 return $value->sum('quantity');
             });
-        return view('top', compact('foodQuantities'));
+        return view('top', compact('foodQuantities', 'categories'));
     }
 
     public function index()
