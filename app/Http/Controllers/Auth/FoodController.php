@@ -31,18 +31,21 @@ class FoodController extends Controller
     {
         // バリデーション
         $request->validate([
+            'category1' => 'required|integer',
             'name1' => 'required|string',
             'quantity1' => 'required|integer',
         ]);
 
         Food::create([
             'user_id' => Auth::user()->id,
+            'category_id' => $request->category1,
             'name' => $request->name1,
             'quantity' => $request->quantity1,
         ]);
         if (!empty($request->name2)) {
             Food::create([
                 'user_id' => Auth::user()->id,
+                'category_id' => $request->category2,
                 'name' => $request->name2,
                 'quantity' => $request->quantity2,
             ]);
@@ -50,6 +53,7 @@ class FoodController extends Controller
         if (!empty($request->name3)) {
             Food::create([
                 'user_id' => Auth::user()->id,
+                'category_id' => $request->category3,
                 'name' => $request->name3,
                 'quantity' => $request->quantity3,
             ]);

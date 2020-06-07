@@ -4,12 +4,20 @@
 <div class="food-regist-wrap">
   <form class="post-page-wrapper" action="/foods/new" method="post">
     @csrf
+    <div class="error-box mx-auto col-6 text-center">
+      @if($errors->first('category1'))
+      <div class="validation mx-auto m-1">{{ $errors->first('category1') }}</div>
+      @endif
+      @if($errors->first('name1'))
+      <div class="validation mx-auto m-1">{{ $errors->first('name1') }}</div>
+      @endif
+      @if($errors->first('quantity1'))
+      <div class="validation m-1">{{ $errors->first('quantity1') }}</div>
+      @endif
+    </div>
     <div class="food-wrap mx-auto m-1" style="width:50%">
       <select class="food-box col-md-3" name="category1">
-        @if($errors->first('category1'))
-        <div class="validation mx-auto m-1">{{ $errors->first('category1') }}</div>
-        @endif
-        <option value="0">選択してください</option>
+        <option value="initial">選択してください</option>
         <option value="1">穀物・いも類</option>
         <option value="2">まめ類</option>
         <option value="3">野菜</option>
@@ -26,15 +34,9 @@
         <option value="14">その他</option>
       </select>
       <div class="food-box col-md-6">
-        @if($errors->first('name1'))
-        <div class="validation mx-auto m-1">{{ $errors->first('name1') }}</div>
-        @endif
         <input type="text" class="form-control m-1" id="title-input" placeholder="食材1" name="name1">
       </div>
       <div class="food-box col-md-3">
-        @if($errors->first('quantity1'))
-        <div class="validation m-1">{{ $errors->first('quantity1') }}</div>
-        @endif
         <input type="text" class="form-control m-1" placeholder="数量1" name="quantity1">
       </div>
     </div>
