@@ -5,13 +5,32 @@
   <form class="post-page-wrapper" action="/foods/new" method="post">
     @csrf
     <div class="food-wrap mx-auto m-1" style="width:50%">
+
+      <select class="food-box col-md-3" name="category">
+        <option value="0">選択してください</option>
+        <option value="1">穀物・いも類</option>
+        <option value="2">まめ類</option>
+        <option value="3">野菜</option>
+        <option value="4">果実</option>
+        <option value="5">きのこ</option>
+        <option value="6">海草</option>
+        <option value="7">魚</option>
+        <option value="8">海産</option>
+        <option value="9">肉</option>
+        <option value="10">卵・乳製品</option>
+        <option value="11">お菓子</option>
+        <option value="12">飲み物</option>
+        <option value="13">調味料</option>
+        <option value="14">その他</option>
+      </select>
+
       <div class="food-box col-md-6">
         @if($errors->first('name1'))
         <div class="validation mx-auto m-1">{{ $errors->first('name1') }}</div>
         @endif
         <input type="text" class="form-control m-1" id="title-input" placeholder="食材1" name="name1">
       </div>
-      <div class="food-box col-md-6">
+      <div class="food-box col-md-2">
         @if($errors->first('quantity1'))
         <div class="validation m-1">{{ $errors->first('quantity1') }}</div>
         @endif
