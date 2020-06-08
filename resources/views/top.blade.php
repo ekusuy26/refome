@@ -43,8 +43,13 @@
             <div>{{$foodList[0]}}</div>
             @foreach ($foodList[1] as $key => $food)
             @if ($food != 0)
-            <div>{{$key}}</div>
-            <div>{{$food}}</div>
+            <table>
+                <tr>
+                    <td>{{$key}}</td>
+                    <td>　</td>
+                    <td>{{$food}}</td>
+                </tr>
+            </table>
             @endif
             @endforeach
             @endforeach
