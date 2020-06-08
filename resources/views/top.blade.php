@@ -37,23 +37,24 @@
 </div>
 @else
 <div class="top-wrapper">
-    <div class="foods-wrapper col-md-6">
-        <div class="food-box-wrap mx-auto" style="width:80%">
+    <div class="foods-wrapper">
+        <div class="food-box-wrap mx-auto row text-center">
             @foreach ($foodLists as $foodList)
-            <div>{{$foodList[0]}}</div>
-            @foreach ($foodList[1] as $key => $food)
-            @if ($food != 0)
-            <table>
-                <tr>
-                    <td>{{$key}}</td>
-                    <td>　</td>
-                    <td>{{$food}}</td>
-                </tr>
-            </table>
-            @endif
+            <div class="category-box col-md-2 m-4">
+                <div class="category-name">{{$foodList[0]}}</div>
+                <div class="category-foods mx-auto" style="width:100%;">
+                    @foreach ($foodList[1] as $key => $food)
+                    @if ($food != 0)
+                    <div class="food-detail">
+                        <div>{{$key}}</div>
+                        <div>{{$food}}</div>
+                    </div>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
             @endforeach
-            @endforeach
-            <table>
+            <!-- <table>
                 <tr>
                     <th>食材名</th>
                     <td>数量</td>
@@ -67,7 +68,7 @@
                 @endif
                 @endforeach
                 <tr>
-            </table>
+            </table> -->
         </div>
     </div>
 </div>

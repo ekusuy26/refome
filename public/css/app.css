@@ -11025,8 +11025,26 @@ nav #Navber .navbar-nav .nav-item #post-link {
 }
 
 .top-wrapper .foods-wrapper .food-box-wrap {
-  background-color: rgba(246, 246, 246, 0.7);
   height: 100%;
+  justify-content: center;
+}
+
+.top-wrapper .foods-wrapper .food-box-wrap .category-box {
+  background-color: rgba(246, 246, 246, 0.7);
+}
+
+.top-wrapper .foods-wrapper .food-box-wrap .category-box .category-foods .food-detail {
+  height: 2.5rem;
+  padding: 0.5em 1em;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0.25rem 0 0.25rem rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(90deg, rgba(115, 115, 115, 0.1) 2rem, rgba(255, 255, 255, 0) 2.5rem), linear-gradient(90deg, #ffffb3, #ffffb3);
+  line-height: 1.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-around;
 }
 
 #logo-wrap {
