@@ -17,10 +17,13 @@ class FoodController extends Controller
             $categoryName = Category::find($categoryNum)->name;
             $aggregate = Food::where('user_id', Auth::id())
                 ->where('category_id', $categoryNum)
-                ->get()
-                ->groupBy(function ($row) {
-                    return $row->name;
-                })
+                ->get();
+            if (isset($aggregate[0]) != true) {
+                continue;
+            }
+            $aggregate = $aggregate->groupBy(function ($row) {
+                return $row->name;
+            })
                 ->map(function ($value) {
                     return $value->sum('quantity');
                 });
