@@ -54,21 +54,6 @@
                 </div>
             </div>
             @endforeach
-            <!-- <table>
-                <tr>
-                    <th>食材名</th>
-                    <td>数量</td>
-                </tr>
-                @foreach ($foodQuantities as $key => $foodQuantity)
-                @if ($foodQuantity != 0)
-                <tr>
-                    <th class="food-name">{{ $key }}</th>
-                    <td class="food-quantity">{{ $foodQuantity }}</td>
-                </tr>
-                @endif
-                @endforeach
-                <tr>
-            </table> -->
         </div>
     </div>
 </div>
