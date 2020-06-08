@@ -11033,6 +11033,11 @@ nav #Navber .navbar-nav .nav-item #post-link {
   background-color: rgba(246, 246, 246, 0.7);
 }
 
+.top-wrapper .foods-wrapper .food-box-wrap .category-box .category-name {
+  border-bottom: double 5px #FFC778;
+  margin-bottom: 1.5rem;
+}
+
 .top-wrapper .foods-wrapper .food-box-wrap .category-box .category-foods .food-detail {
   height: 2.5rem;
   padding: 0.5em 1em;

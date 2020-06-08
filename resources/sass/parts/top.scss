@@ -14,9 +14,12 @@
       justify-content: center;
       .category-box{
         background-color:rgba(246,246,246,0.7);
+        .category-name{
+          border-bottom: double 5px #FFC778;
+          margin-bottom: 1.5rem;
+        }
         .category-foods{
           .food-detail{
-            // width: 16.5rem;
             height: 2.5rem;
             padding: 0.5em 1em;
             margin-bottom: 0.5rem;
