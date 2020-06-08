@@ -11027,7 +11027,9 @@ nav #Navber .navbar-nav .nav-item #post-link {
 
 .top-wrapper .foods-wrapper .food-box-wrap {
   height: 100%;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .top-wrapper .foods-wrapper .food-box-wrap .category-box {

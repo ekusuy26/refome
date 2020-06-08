@@ -12,7 +12,9 @@
     padding: 0 20px;
     .food-box-wrap{
       height: 100%;
-      justify-content: center;
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: flex-start;
       .category-box{
         background-color:rgba(246,246,246,0.7);
         .category-name{
