@@ -11022,7 +11022,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
   height: calc(100vh - 100px);
   min-height: 600px;
   margin: 0px auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .top-wrapper .foods-wrapper .food-box-wrap {
@@ -11042,7 +11042,7 @@ nav #Navber .navbar-nav .nav-item #post-link {
 .top-wrapper .foods-wrapper .food-box-wrap .category-box .category-foods .food-detail {
   height: 2.5rem;
   padding: 0.5em 1em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   box-shadow: 0.25rem 0 0.25rem rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(90deg, rgba(115, 115, 115, 0.1) 2rem, rgba(255, 255, 255, 0) 2.5rem), linear-gradient(90deg, #ffffb3, #ffffb3);
