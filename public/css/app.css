@@ -11032,16 +11032,17 @@ nav #Navber .navbar-nav .nav-item #post-link {
   justify-content: flex-start;
 }
 
-.top-wrapper .foods-wrapper .food-box-wrap .category-box {
+.top-wrapper .foods-wrapper .food-box-wrap .category-box .top-category-wrap {
   background-color: rgba(246, 246, 246, 0.7);
+  padding: 30px;
 }
 
-.top-wrapper .foods-wrapper .food-box-wrap .category-box .category-name {
+.top-wrapper .foods-wrapper .food-box-wrap .category-box .top-category-wrap .category-name {
   border-bottom: double 5px #FFC778;
   margin-bottom: 1.5rem;
 }
 
-.top-wrapper .foods-wrapper .food-box-wrap .category-box .category-foods .food-detail {
+.top-wrapper .foods-wrapper .food-box-wrap .category-box .top-category-wrap .category-foods .food-detail {
   height: 2.5rem;
   padding: 0.5em 1em;
   margin-bottom: 1rem;

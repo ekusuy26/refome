@@ -16,26 +16,29 @@
       flex-wrap:wrap;
       justify-content: flex-start;
       .category-box{
-        background-color:rgba(246,246,246,0.7);
-        .category-name{
-          border-bottom: double 5px #FFC778;
-          margin-bottom: 1.5rem;
-        }
-        .category-foods{
-          .food-detail{
-            height: 2.5rem;
-            padding: 0.5em 1em;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            box-shadow: .25rem 0 .25rem hsla(0, 0%, 0%, .1);
-            background-image:
-              linear-gradient(90deg, hsla(0, 0%, 45%, .1) 2rem, hsla(0, 100%, 100%, 0) 2.5rem)
-            , linear-gradient(90deg, hsla(60, 100%, 85%, 1), hsla(60, 100%, 85%, 1));
-            line-height: 1.5rem;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            display: flex;
-            justify-content: space-around;
+        .top-category-wrap{
+          background-color:rgba(246,246,246,0.7);
+          padding: 30px;
+          .category-name{
+            border-bottom: double 5px #FFC778;
+            margin-bottom: 1.5rem;
+          }
+          .category-foods{
+            .food-detail{
+              height: 2.5rem;
+              padding: 0.5em 1em;
+              margin-bottom: 1rem;
+              overflow: hidden;
+              box-shadow: .25rem 0 .25rem hsla(0, 0%, 0%, .1);
+              background-image:
+                linear-gradient(90deg, hsla(0, 0%, 45%, .1) 2rem, hsla(0, 100%, 100%, 0) 2.5rem)
+              , linear-gradient(90deg, hsla(60, 100%, 85%, 1), hsla(60, 100%, 85%, 1));
+              line-height: 1.5rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              display: flex;
+              justify-content: space-around;
+            }
           }
         }
       }
