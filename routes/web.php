@@ -20,8 +20,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/foods/new', 'Auth\FoodController@index')->name('foods.new');
 Route::post('/foods/new', 'Auth\FoodController@foodArticle')->name('foods.new.posts');
 
-Route::get('/foods/delete', 'Auth\FoodController@delete')->name('foods.delete');
-Route::post('/foods/delete', 'Auth\FoodController@foodDelete')->name('foods.delete.posts');
+Route::get('/foods/edit', 'Auth\FoodController@edit')->name('foods.edit');
+Route::post('/foods/edit', 'Auth\FoodController@foodEdit')->name('foods.edit.posts');
 
 Route::get('/posts/new', 'Auth\PostController@index')->name('posts.new');
 Route::post('/posts/new', 'Auth\PostController@postArticle')->name('posts.new.posts');

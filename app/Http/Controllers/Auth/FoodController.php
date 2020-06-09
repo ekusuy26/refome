@@ -79,16 +79,16 @@ class FoodController extends Controller
         return redirect('/');
     }
 
-    public function delete()
+    public function edit()
     {
         $categories = Category::get();
         $foods = Food::where('user_id', Auth::id())
             ->orderBy('category_id', 'asc')
             ->get();
-        return view('auth.foods.delete', compact('categories', 'foods'));
+        return view('auth.foods.edit', compact('categories', 'foods'));
     }
 
-    public function foodDelete(Request $request)
+    public function foodEdit(Request $request)
     {
         $foodDatas = Food::where('user_id', Auth::id())->get();
         foreach ($foodDatas as $foodData){
