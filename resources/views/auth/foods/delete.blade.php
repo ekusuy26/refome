@@ -9,14 +9,15 @@
       @foreach ($foods as $food)
       @if ($food->category_id == $category->id)
       <div class="test-wrap" style="display:flex;">
-        <input type="text" class="form-control m-1" id="title-input" name="title" value="{{$food->name}}">
-        <input type="text" class="form-control col-3 m-1" id="title-input" name="title" value="{{$food->quantity}}">
+        <input type="text" class="form-control m-1" id="title-input" name="name{{$food->id}}" value="{{$food->name}}">
+        <input type="text" class="form-control col-3 m-1" id="title-input" name="quantity{{$food->id}}" value="{{$food->quantity}}">
       </div>
       @endif
       @endforeach
     </div>
     @endforeach
   </div>
+  <input type="submit" class="post-button btn-lg" value="冷蔵庫から取り出す">
 </form>
 
 <div class="food-regist-wrap">

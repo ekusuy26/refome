@@ -90,30 +90,13 @@ class FoodController extends Controller
 
     public function foodDelete(Request $request)
     {
-        // バリデーション
-        $request->validate([
-            'name1' => 'required|string',
-            'quantity1' => 'required|integer',
-        ]);
-
-        Food::create([
-            'user_id' => Auth::user()->id,
-            'name' => $request->name1,
-            'quantity' => - ($request->quantity1),
-        ]);
-        if (!empty($request->name2)) {
-            Food::create([
-                'user_id' => Auth::user()->id,
-                'name' => $request->name2,
-                'quantity' => - ($request->quantity2),
-            ]);
-        }
-        if (!empty($request->name3)) {
-            Food::create([
-                'user_id' => Auth::user()->id,
-                'name' => $request->name3,
-                'quantity' => - ($request->quantity3),
-            ]);
+        $foodDatas = Food::where('user_id', Auth::id())->get();
+        foreach ($foodDatas as $foodData){
+            $foodId = $foodData->id;
+            $food = Food::find($foodId);
+            $f = "quantity".$foodId;
+            $food->quantity = $request->$f;
+            $food->save(); 
         }
         return redirect('/');
     }
