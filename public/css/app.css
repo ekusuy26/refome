@@ -11306,15 +11306,16 @@ nav #Navber .navbar-nav .nav-item #post-link {
   text-align: center;
 }
 
-.food-edit-wrap .category-wrap {
+.food-edit-wrap .category-wrap .category-list {
   padding: 1.5em;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(180deg, rgba(115, 115, 115, 0.1) 2rem, rgba(255, 255, 255, 0) 2.5rem), linear-gradient(180deg, #b3e6ff, #b3e6ff);
   font-size: 1.125rem;
   line-height: 1.8;
+  margin: 5px;
 }
 
-.food-edit-wrap .category-wrap .input-food {
+.food-edit-wrap .category-wrap .category-list .input-food {
   display: flex;
 }
 
