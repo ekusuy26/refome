@@ -48,27 +48,17 @@ class PostController extends Controller
                 'body' => $request->body,
             ]);
 
-            Material::create([
-                'user_id' => Auth::user()->id,
-                'post_id' => $article->id,
-                'name' => $request->name1,
-                'quantity' => - ($request->quantity1),
-            ]);
-            if (!empty($request->name2)) {
-                Material::create([
-                    'user_id' => Auth::user()->id,
-                    'post_id' => $article->id,
-                    'name' => $request->name2,
-                    'quantity' => - ($request->quantity2),
-                ]);
-            }
-            if (!empty($request->name3)) {
-                Material::create([
-                    'user_id' => Auth::user()->id,
-                    'post_id' => $article->id,
-                    'name' => $request->name3,
-                    'quantity' => - ($request->quantity3),
-                ]);
+            for ($materialNum = 1; $materialNum < 4; $materialNum++) {
+                $name = 'name' . $materialNum;
+                $quantity = 'quantity' . $materialNum;
+                if (!empty($request->$name)) {
+                    Material::create([
+                        'user_id' => Auth::user()->id,
+                        'post_id' => $article->id,
+                        'name' => $request->$name,
+                        'quantity' => $request->$quantity,
+                    ]);
+                }
             }
 
             return redirect("/posts/{$article->id}")->with(['success' => 'ファイルを保存しました']);
