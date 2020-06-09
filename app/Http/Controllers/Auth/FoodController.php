@@ -81,7 +81,11 @@ class FoodController extends Controller
 
     public function delete()
     {
-        return view('auth.foods.delete');
+        $foods = Food::where('user_id', Auth::id())
+            ->orderBy('category_id', 'asc')
+            ->join('categories', 'foods.category_id', '=', 'categories.id')
+            ->get();
+        return view('auth.foods.delete', compact('foods'));
     }
 
     public function foodDelete(Request $request)

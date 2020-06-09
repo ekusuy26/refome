@@ -4,6 +4,17 @@
 <div class="food-regist-wrap">
   <form class="post-page-wrapper" action="/foods/delete" method="post">
     @csrf
+    @foreach ($foods as $food)
+    <div class="test-wrap" style="display:flex;">
+    <input type="text" class="form-control col-2 m-1" id="title-input" name="title" value="{{$food->name}}">
+    <input type="text" class="form-control col-1 m-1" id="title-input" name="title" value="{{$food->quantity}}">
+    {{$food->category->name}}
+    </div>
+    @endforeach
+  </form>
+
+  <form class="post-page-wrapper" action="/foods/delete" method="post">
+    @csrf
     <div class="food-wrap mx-auto m-1" style="width:50%">
       <div class="food-box col-md-6">
         @if($errors->first('name1'))
