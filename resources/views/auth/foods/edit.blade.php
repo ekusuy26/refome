@@ -7,14 +7,16 @@
   </div>
   <div class="food-edit-wrap mx-auto" style="width:90%;">
     @foreach ($categories as $category)
-    <div class="category-wrap col-lg-3 col-md-4 col-sm-6">
+    <div class="category-wrap col-xl-3 col-md-4 col-sm-6">
       <div class="category-list">
+      <div class="category-name">
         {{$category->name}}
+      </div>
         @foreach ($foods as $food)
         @if ($food->category_id == $category->id)
         <div class="input-food">
           <div class="food-edit-name">{{$food->name}}</div>
-          <input type="text" class="form-control" id="title-input" name="quantity{{$food->id}}" value="{{$food->quantity}}">
+          <input type="text" class="food-edit-quantity" id="title-input" name="quantity{{$food->id}}" value="{{$food->quantity}}">
         </div>
         @endif
         @endforeach
