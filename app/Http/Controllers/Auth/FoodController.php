@@ -81,10 +81,15 @@ class FoodController extends Controller
 
     public function edit()
     {
-        $categories = Category::get();
         $foods = Food::where('user_id', Auth::id())
             ->orderBy('category_id', 'asc')
             ->get();
+        $categories_id = array();
+        foreach ($foods as $f){
+            array_push($categories_id, $f->category_id);
+        }
+        $categoryLists = array_values(array_unique($categories_id));
+        $categories = category::whereIn('id', $categoryLists)->get();
         return view('auth.foods.edit', compact('categories', 'foods'));
     }
 
