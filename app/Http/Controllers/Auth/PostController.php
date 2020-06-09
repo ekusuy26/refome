@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Food;
+use App\Material;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -47,27 +48,24 @@ class PostController extends Controller
                 'body' => $request->body,
             ]);
 
-            Food::create([
+            Material::create([
                 'user_id' => Auth::user()->id,
                 'post_id' => $article->id,
-                'category_id' => $request->category1,
                 'name' => $request->name1,
                 'quantity' => - ($request->quantity1),
             ]);
             if (!empty($request->name2)) {
-                Food::create([
+                Material::create([
                     'user_id' => Auth::user()->id,
                     'post_id' => $article->id,
-                    'category_id' => $request->category2,
                     'name' => $request->name2,
                     'quantity' => - ($request->quantity2),
                 ]);
             }
             if (!empty($request->name3)) {
-                Food::create([
+                Material::create([
                     'user_id' => Auth::user()->id,
                     'post_id' => $article->id,
-                    'category_id' => $request->category3,
                     'name' => $request->name3,
                     'quantity' => - ($request->quantity3),
                 ]);
@@ -81,7 +79,7 @@ class PostController extends Controller
     public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
-        $foods = Food::where('post_id', $id)->get();
+        $foods = Material::where('post_id', $id)->get();
 
         $count_favorite_users = $article->favorite_users()->count();
 
