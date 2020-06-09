@@ -54,27 +54,18 @@ class FoodController extends Controller
             'quantity1' => 'required|integer',
         ]);
 
-        Food::create([
-            'user_id' => Auth::user()->id,
-            'category_id' => $request->category1,
-            'name' => $request->name1,
-            'quantity' => $request->quantity1,
-        ]);
-        if (!empty($request->name2)) {
-            Food::create([
-                'user_id' => Auth::user()->id,
-                'category_id' => $request->category2,
-                'name' => $request->name2,
-                'quantity' => $request->quantity2,
-            ]);
-        }
-        if (!empty($request->name3)) {
-            Food::create([
-                'user_id' => Auth::user()->id,
-                'category_id' => $request->category3,
-                'name' => $request->name3,
-                'quantity' => $request->quantity3,
-            ]);
+        for ($foodNum = 1; $foodNum < 4; $foodNum++) {
+            $name = 'name' . $foodNum;
+            $quantity = 'quantity' . $foodNum;
+            $category = 'category' . $foodNum;
+            if (!empty($request->$name)) {
+                Food::create([
+                    'user_id' => Auth::user()->id,
+                    'category_id' => $request->$category,
+                    'name' => $request->$name,
+                    'quantity' => $request->$quantity,
+                ]);
+            }
         }
         return redirect('/');
     }
@@ -85,7 +76,7 @@ class FoodController extends Controller
             ->orderBy('category_id', 'asc')
             ->get();
         $categories_id = array();
-        foreach ($foods as $f){
+        foreach ($foods as $f) {
             array_push($categories_id, $f->category_id);
         }
         $categoryLists = array_values(array_unique($categories_id));
@@ -96,14 +87,14 @@ class FoodController extends Controller
     public function foodEdit(Request $request)
     {
         $foodDatas = Food::where('user_id', Auth::id())->get();
-        foreach ($foodDatas as $foodData){
+        foreach ($foodDatas as $foodData) {
             $foodId = $foodData->id;
             $food = Food::find($foodId);
-            $f = "quantity".$foodId;
+            $f = "quantity" . $foodId;
             $food->quantity = $request->$f;
-            $food->save(); 
+            $food->save();
         }
-        Food::where('quantity','0')->delete();
+        Food::where('quantity', '0')->delete();
         return redirect('/');
     }
 }
