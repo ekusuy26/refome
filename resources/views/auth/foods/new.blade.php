@@ -4,6 +4,9 @@
 <div class="food-regist-wrap">
   <form class="post-page-wrapper" action="/foods/new" method="post">
     @csrf
+    <div class="post-page-footer mx-auto m-1" style="width:50%;">
+      <input type="submit" class="post-button btn-lg" value="冷蔵庫に入れる">
+    </div>
     <div class="error-box mx-auto col-6 text-center">
       @if($errors->first('category1'))
       <div class="validation mx-auto m-1">{{ $errors->first('category1') }}</div>
@@ -89,9 +92,6 @@
       <div class="food-box col-md-3">
         <input type="text" class="form-control m-1" placeholder="数量3" name="quantity3">
       </div>
-    </div>
-    <div class="post-page-footer mx-auto m-1" style="width:50%;">
-      <input type="submit" class="post-button btn-lg" value="冷蔵庫に入れる">
     </div>
   </form>
 </div>

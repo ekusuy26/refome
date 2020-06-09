@@ -32,18 +32,18 @@ class PostController extends Controller
     public function postArticle(Request $request)
     {
         if ($request->isMethod('POST')) {
-            // if (app()->isLocal()) {
-            //     // ローカル環境用
-            //     $path = $request->image->store('public/img');
-            // }else {
-                $image = $request->file('image');
-                $path = Storage::disk('s3')->put('myprefix', $image, 'public');
-            // }
+
+            // ローカル環境用
+            $path = $request->image->store('public/img');
+
+            // // 本番環境用
+            // $image = $request->file('image');
+            // $path = Storage::disk('s3')->put('myprefix', $image, 'public');
+
             $article = Post::create([
                 'user_id' => Auth::user()->id,
                 'title' => $request->title,
                 'image' => basename($path),
-                'material' => Auth::user()->id,
                 'body' => $request->body,
             ]);
 
@@ -107,7 +107,7 @@ class PostController extends Controller
         if (app()->isLocal()) {
             // ローカル環境用
             $path = $request->image->store('public/img');
-        }else {
+        } else {
             $image = $request->file('image');
             $path = Storage::disk('s3')->put('myprefix', $image, 'public');
         }

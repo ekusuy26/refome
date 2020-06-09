@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'image', 'material', 'body', 'user_id'];
+    protected $fillable = ['title', 'image', 'body', 'user_id', 'category_id'];
 
     public function favorite_users()
     {

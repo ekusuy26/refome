@@ -103,6 +103,7 @@ class FoodController extends Controller
             $food->quantity = $request->$f;
             $food->save(); 
         }
+        Food::where('quantity','0')->delete();
         return redirect('/');
     }
 }

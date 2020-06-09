@@ -4,6 +4,7 @@
   @csrf
   <div class="post-page-footer mx-auto m-1" style="width:50%;">
     <input type="submit" class="post-button btn-lg" value="冷蔵庫から取り出す">
+    <p style="color:red;">使い切った食材は「0」にしてください</p>
   </div>
   <div class="food-edit-wrap mx-auto" style="width:90%;">
     @foreach ($categories as $category)
