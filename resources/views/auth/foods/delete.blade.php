@@ -1,18 +1,25 @@
 @extends('layouts.common')
 @section('content')
-
-<div class="food-regist-wrap">
-  <form class="post-page-wrapper" action="/foods/delete" method="post">
-    @csrf
-    @foreach ($foods as $food)
-    <div class="test-wrap" style="display:flex;">
-    <input type="text" class="form-control col-2 m-1" id="title-input" name="title" value="{{$food->name}}">
-    <input type="text" class="form-control col-1 m-1" id="title-input" name="title" value="{{$food->quantity}}">
-    {{$food->category->name}}
+<form class="food-edit" action="/foods/delete" method="post">
+  @csrf
+  <div class="test-wrap mx-auto" style="width:90%; display:flex; flex-wrap:wrap;">
+    @foreach ($categories as $category)
+    <div class="category-wrap col-3">
+      {{$category->name}}
+      @foreach ($foods as $food)
+      @if ($food->category_id == $category->id)
+      <div class="test-wrap" style="display:flex;">
+        <input type="text" class="form-control m-1" id="title-input" name="title" value="{{$food->name}}">
+        <input type="text" class="form-control col-3 m-1" id="title-input" name="title" value="{{$food->quantity}}">
+      </div>
+      @endif
+      @endforeach
     </div>
     @endforeach
-  </form>
+  </div>
+</form>
 
+<div class="food-regist-wrap">
   <form class="post-page-wrapper" action="/foods/delete" method="post">
     @csrf
     <div class="food-wrap mx-auto m-1" style="width:50%">
