@@ -89,8 +89,8 @@ class PostController extends Controller
     public function edit($id)
     {
         $article = Post::find($id);
-        $foods = Food::where('post_id', $id)->get();
-        return view('auth.posts.edit', compact('article', 'foods'));
+        $materials = Material::where('post_id', $id)->get();
+        return view('auth.posts.edit', compact('article', 'materials'));
     }
 
     public function foodEdit(Request $request)
