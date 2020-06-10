@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
-use App\Food;
 use App\Material;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -34,12 +33,12 @@ class PostController extends Controller
     {
         if ($request->isMethod('POST')) {
 
-            // ローカル環境用
-            $path = $request->image->store('public/img');
+            // // ローカル環境用
+            // $path = $request->image->store('public/img');
 
-            // // 本番環境用
-            // $image = $request->file('image');
-            // $path = Storage::disk('s3')->put('myprefix', $image, 'public');
+            // 本番環境用
+            $image = $request->file('image');
+            $path = Storage::disk('s3')->put('myprefix', $image, 'public');
 
             $article = Post::create([
                 'user_id' => Auth::user()->id,
@@ -95,13 +94,12 @@ class PostController extends Controller
 
     public function foodEdit(Request $request)
     {
-        if (app()->isLocal()) {
-            // ローカル環境用
-            $path = $request->image->store('public/img');
-        } else {
-            $image = $request->file('image');
-            $path = Storage::disk('s3')->put('myprefix', $image, 'public');
-        }
+        // // ローカル環境用
+        // $path = $request->image->store('public/img');
+        // 本番環境用
+        $image = $request->file('image');
+        $path = Storage::disk('s3')->put('myprefix', $image, 'public');
+
         $article = Post::find($request->id);
         $form = $request->all();
         unset($form['_token']);
@@ -109,6 +107,17 @@ class PostController extends Controller
         $article->image = basename($path);
         $article->body = $request->body;
         $article->save();
+
+        $materials = Material::where('post_id', $request->id)->get();
+        foreach ($materials as $material) {
+            $material->id;
+            $name = "name" . $material->id;
+            $quantity = "quantity" . $material->id;
+            $material->name = $request->$name;
+            $material->quantity = $request->$quantity;
+            $material->save();
+        }
+
         return redirect("/posts/{$article->id}")->with(['success' => 'レシピを更新しました']);
     }
 }

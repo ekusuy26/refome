@@ -21,7 +21,7 @@
                         @foreach ($materials as $material)
                         <div class="post-new-material-box">
                             <input type="text" class="form-control" placeholder="材料" name="name{{$material->id}}" value="{{$material->name}}">
-                            <input type="text" class="form-control" placeholder="数量" name="quantity" value="{{abs($material->quantity)}}">
+                            <input type="text" class="form-control" placeholder="数量" name="quantity{{$material->id}}" value="{{$material->quantity}}">
                         </div>
                         @endforeach
                         <div class="post-page-footer">
