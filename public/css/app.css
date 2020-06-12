@@ -10962,10 +10962,10 @@ nav {
 }
 
 nav #Navber .navbar-nav .nav-item #post-link {
-  background-color: #FF9900;
   border-radius: 5px;
   padding-left: 1rem;
   padding-right: 1rem;
+  border-bottom: solid 2px;
 }
 
 #login-wrapper {

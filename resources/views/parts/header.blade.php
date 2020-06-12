@@ -13,19 +13,19 @@
     <ul class="navbar-nav ml-auto mr-5">
       @if (Auth::check())
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" id="post-link" href="/posts">レシピ一覧</a>
+        <a class="nav-link" id="post-link" href="/posts">レシピ一覧</a>
       </li>
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" id="post-link" href="/posts/new">レシピを投稿</a>
+        <a class="nav-link" id="post-link" href="/posts/new">レシピを投稿</a>
       </li>
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" id="post-link" href="/foods/edit">使った材料の入力</a>
+        <a class="nav-link" id="post-link" href="/foods/edit">使った材料の入力</a>
       </li>
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" id="post-link" href="/foods/new">登録する</a>
+        <a class="nav-link" id="post-link" href="/foods/new">登録する</a>
       </li>
       <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle text-white" id="navbarDropdown" style="width: 100px;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" style="width: 100px;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-user" style="font-size: 20px;"></i>
         {{ Auth::user()->name }}
         </a>
