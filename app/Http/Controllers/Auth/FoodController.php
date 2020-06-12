@@ -29,15 +29,7 @@ class FoodController extends Controller
                 });
             array_push($foodLists, array($categoryName, $aggregate));
         }
-        $foodQuantities = Food::where('user_id', Auth::id())
-            ->get()
-            ->groupBy(function ($row) {
-                return $row->name;
-            })
-            ->map(function ($value) {
-                return $value->sum('quantity');
-            });
-        return view('top', compact('foodQuantities', 'foodLists'));
+        return view('top', compact('foodLists'));
     }
 
     public function index()
