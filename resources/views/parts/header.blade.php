@@ -35,7 +35,7 @@
           <a class="dropdown-item" href="#">設定</a>
           <div class="dropdown-divider"></div>
 
-          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+          <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">
             ログアウト
           </a>
