@@ -43,8 +43,6 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
 define( 'DB_COLLATE', '' );
 
-define('FS_METHOD','direct');
-
 /**#@+
  * 認証用ユニークキー
  *
@@ -54,14 +52,14 @@ define('FS_METHOD','direct');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '8d3x=gf0d0oC>vGLHC]C@RrdE79$|DYv}ExD@@|!GLu4u2K<^;|I*RxGLt/:Hyx:' );
-define( 'SECURE_AUTH_KEY',  ';YI49%qv::L#<61QAZkp;dpuF]mzv*3[S`Rb&u:lU7!)7R>Ec/gkh[V)G>SWYk;}' );
-define( 'LOGGED_IN_KEY',    '>xKfmz(elY).Ha5N{)t/9E`~<~#[}}%RMio15 }@t.Y)BS>&m[Hi(y9v[PH+Q.4a' );
-define( 'NONCE_KEY',        't`bXLO(SSQB~1iE3RaPsh-LZN=$i^>HTVlgZ6(pEJx9:oo7ZU1z;lKW^xAuTo6/Q' );
-define( 'AUTH_SALT',        ',pd8D7C ,WN#J!%Gk[Vb3Xiad4sk/:jM>N(S?hYaq.4]:+C98-Rk-89Kn6<iq3!O' );
-define( 'SECURE_AUTH_SALT', '0Fymo.>prP16x/*esPE`.1rhvi<=RznA,N:8.b.#Il`Oaun![JPz^@j1m1Xd>7%g' );
-define( 'LOGGED_IN_SALT',   'b}H#3 RtUh@a5hCLZV35)sqpD?: Op?8r!nt;|Rw-z4=g? :_9lZC7F[#@`T^.M ' );
-define( 'NONCE_SALT',       'P403L}$ALryN/A$Gq)sb7ItJc!|LW0&JcA`wwTFl,a[ABbJ=P_c4_JprJ2y0CRg?' );
+define( 'AUTH_KEY',         'W)I!J[)]bYx3cqbYFUtN3/d{<XsU>aDW;BX^z->]u#}5SDOY!@DME7P_}%5CTh&W' );
+define( 'SECURE_AUTH_KEY',  '?s73Em&Y;^E~mq5U6F~cU|WTt-4EJly 6poo0F^VnEnaUi/~p@}V%s~]LcG4?O=O' );
+define( 'LOGGED_IN_KEY',    'EIP)5t=ktkYF)nHO;O>n+$LJIG.#O#4w^+)N:Pn4dBD[n~2FGcio]Ym~e~^gL)`s' );
+define( 'NONCE_KEY',        'goG~KMY !#I95t.0{U9ilIE@*`^v3LkTd>_x@xh5uSD%;[@Mf3^3]P*q$/ rN80b' );
+define( 'AUTH_SALT',        'fYOo=:Q?:yB6m5~;i|KQ_j1Zb8o(lNeLt5XnNCG`-W>S ygP D+-:LnEW^C_u<ts' );
+define( 'SECURE_AUTH_SALT', '?bR2Q_@3dJvqn%b<;dss7?v#l_d3Yrgba 4~@cXe=o$9b~4qOpH<r%.a d%wSxlX' );
+define( 'LOGGED_IN_SALT',   'whbs2Q<<-,~G<wUk}/717Y6(|0PW^=3sm)|4qq#r)y2Njyr9a^CA[D9OI6a-[_T*' );
+define( 'NONCE_SALT',       '1wos0J_R8*}oeVo#nH@[q(n?gvuQI|U?`LL?&18d:S+vHQGveq[<*BwaWL^1*3z^' );
 
 /**#@-*/
 
