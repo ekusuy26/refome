@@ -43,6 +43,8 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
 define( 'DB_COLLATE', '' );
 
+define('FS_METHOD','direct');
+
 /**#@+
  * 認証用ユニークキー
  *
